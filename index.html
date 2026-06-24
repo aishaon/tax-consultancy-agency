@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html lang="en" x-data="navbar()">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ajay & Safiullah Associates | NBR Approved VAT & Tax Consultancy Firm - Rangpur, Bangladesh</title>
+  <meta name="description" content="Ajay & Safiullah Associates is an NBR Approved VAT & Tax Consultancy Firm in Rangpur, Bangladesh. We provide Income Tax, VAT, Accounting, Business Registration, and Financial Consultancy services.">
+  <meta name="keywords" content="VAT consultancy, tax consultancy, income tax, tax return, accounting, bookkeeping, business registration, BIN registration, TIN registration, RJSC services, trade license, company formation, Rangpur, Bangladesh">
+  <meta name="author" content="Ajay & Safiullah Associates">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.ajaysafiullah.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Ajay & Safiullah Associates | NBR Approved VAT & Tax Consultancy">
+  <meta property="og:description" content="Professional VAT, Tax, Accounting & Business Registration Services in Rangpur, Bangladesh.">
+  <meta property="og:url" content="https://www.ajaysafiullah.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_BG">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ajay & Safiullah Associates | NBR Approved VAT & Tax Consultancy">
+  <meta name="twitter:description" content="Professional VAT, Tax, Accounting & Business Registration Services in Rangpur, Bangladesh.">
+
+  <!-- JSON-LD LocalBusiness Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Ajay & Safiullah Associates",
+    "description": "NBR Approved VAT & Tax Consultancy Firm",
+    "url": "https://www.ajaysafiullah.com/",
+    "telephone": "+8801886135595",
+    "email": "info@ajaysafiullah.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Samabay Market (2nd Floor)",
+      "addressLocality": "Rangpur",
+      "addressCountry": "BD"
+    },
+    "areaServed": "Rangpur, Bangladesh",
+    "priceRange": "$$",
+    "openingHours": "Mo-Sa 09:00-18:00",
+    "currenciesAccepted": "BDT",
+    "paymentAccepted": ["Cash", "Bank Transfer", "bKash", "Nagad"]
+  }
+  </script>
+
+  <!-- Breadcrumb Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.ajaysafiullah.com/" }
+    ]
+  }
+  </script>
+
+  <!-- Fonts & Libraries CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+  tailwind.config = {
+    theme: { extend: { colors: { primary: '#0F4C81', secondary: '#0E9F6E', accent: '#F59E0B' } } }
+  }
+  </script>
+  <link rel="stylesheet" href="assets/css/custom.css">
+
+  <style>
+    [x-cloak] { display: none !important; }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== -->
+  <!-- TOAST NOTIFICATION    -->
+  <!-- ==================== -->
+  <div x-data="toast()" x-show="show" x-cloak class="toast" :class="{ 'show': show }" role="alert" aria-live="polite">
+    <div class="toast-icon">
+      <i class="fas fa-check-circle"></i>
+    </div>
+    <div>
+      <p class="font-semibold text-sm" x-text="message"></p>
+    </div>
+    <button @click="close()" class="ml-auto text-gray-400 hover:text-gray-600 transition" aria-label="Close notification">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+
+  <!-- ==================== -->
+  <!-- BACK TO TOP BUTTON    -->
+  <!-- ==================== -->
+  <button class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- ==================== -->
+  <!-- TOP BAR               -->
+  <!-- ==================== -->
+  <div class="hidden lg:block bg-[#0F4C81] text-white text-sm py-2">
+    <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+      <div class="flex items-center gap-6">
+        <a href="tel:+8801886135595" class="hover:text-[#F59E0B] transition flex items-center gap-2">
+          <i class="fas fa-phone-alt text-[#F59E0B]"></i> +880 1886-135595
+        </a>
+        <a href="tel:+8801714086432" class="hover:text-[#F59E0B] transition flex items-center gap-2">
+          <i class="fas fa-phone-alt text-[#F59E0B]"></i> +880 1714-086432
+        </a>
+        <a href="mailto:info@ajaysafiullah.com" class="hover:text-[#F59E0B] transition flex items-center gap-2">
+          <i class="fas fa-envelope text-[#F59E0B]"></i> info@ajaysafiullah.com
+        </a>
+      </div>
+      <div class="flex items-center gap-4">
+        <span class="flex items-center gap-2">
+          <i class="fas fa-map-marker-alt text-[#F59E0B]"></i> Samabay Market, Rangpur
+        </span>
+        <div class="flex items-center gap-3 ml-4">
+          <a href="#" class="hover:text-[#F59E0B] transition" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="hover:text-[#F59E0B] transition" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="#" class="hover:text-[#F59E0B] transition" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="hover:text-[#F59E0B] transition" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== -->
+  <!-- NAVBAR                -->
+  <!-- ==================== -->
+  <header class="navbar" :class="{ 'navbar-scrolled': scrolled, 'navbar-hidden': hidden }" role="banner">
+    <nav class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between" aria-label="Main navigation">
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-3 text-decoration-none" aria-label="Ajay & Safiullah Associates Home">
+        <div class="w-10 h-10 rounded-xl gradient-primary flex items-center justify-center text-white font-bold text-lg">
+          <i class="fas fa-calculator"></i>
+        </div>
+        <div>
+          <h1 class="text-lg font-extrabold text-[#0F4C81] leading-tight m-0">Ajay & Safiullah</h1>
+          <p class="text-[10px] font-semibold text-[#0E9F6E] tracking-wider uppercase m-0 leading-tight">VAT & Tax Consultancy</p>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <ul class="hidden lg:flex items-center gap-8 list-none m-0 p-0">
+        <li><a href="index.html" class="nav-link active-link" aria-current="page">Home</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li class="relative" @mouseenter="toggleDropdown('services')" @mouseleave="closeDropdown()">
+          <a href="services.html" class="nav-link flex items-center gap-1">
+            Services <i class="fas fa-chevron-down text-xs"></i>
+          </a>
+          <div x-show="activeDropdown === 'services'" x-cloak x-transition class="absolute top-full left-0 mt-2 w-64 glass rounded-xl shadow-xl py-3 z-50">
+            <div class="grid gap-1 px-2">
+              <a href="services.html#income-tax" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-[#0F4C81]/5 rounded-lg transition font-medium">Income Tax</a>
+              <a href="services.html#vat" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-[#0F4C81]/5 rounded-lg transition font-medium">VAT Consultancy</a>
+              <a href="services.html#tax-return" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-[#0F4C81]/5 rounded-lg transition font-medium">Tax Return</a>
+              <a href="services.html#accounting" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-[#0F4C81]/5 rounded-lg transition font-medium">Accounting & Bookkeeping</a>
+              <a href="services.html#registration" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-[#0F4C81]/5 rounded-lg transition font-medium">Business Registration</a>
+              <a href="services.html#financial" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-[#0F4C81]/5 rounded-lg transition font-medium">Financial Consultancy</a>
+              <a href="services.html" class="block px-4 py-2.5 text-sm text-[#0F4C81] font-bold hover:bg-[#0F4C81]/5 rounded-lg transition">View All Services →</a>
+            </div>
+          </div>
+        </li>
+        <li><a href="blog.html" class="nav-link">Blog</a></li>
+        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="faq.html" class="nav-link">FAQ</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- CTA + Mobile Toggle -->
+      <div class="flex items-center gap-3">
+        <a href="appointment.html" class="btn btn-primary btn-sm hidden sm:inline-flex">
+          <i class="fas fa-calendar-check"></i> Book Now
+        </a>
+        <button @click="toggleMobile()" class="lg:hidden w-10 h-10 rounded-lg border border-gray-200 flex items-center justify-center text-gray-700 hover:bg-gray-100 transition" aria-label="Toggle mobile menu" :aria-expanded="mobileOpen">
+          <i class="fas fa-bars" x-show="!mobileOpen"></i>
+          <i class="fas fa-times" x-show="mobileOpen" x-cloak></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div x-show="mobileOpen" x-cloak x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 -translate-y-4" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-4" class="lg:hidden border-t border-gray-100 bg-white shadow-lg" role="navigation" aria-label="Mobile navigation">
+      <div class="max-w-7xl mx-auto px-6 py-4">
+        <ul class="list-none m-0 p-0 space-y-1">
+          <li><a href="index.html" class="block px-4 py-3 rounded-lg text-gray-700 hover:bg-[#0F4C81]/5 hover:text-[#0F4C81] transition font-medium" @click="closeMobile()" aria-current="page">Home</a></li>
+          <li><a href="about.html" class="block px-4 py-3 rounded-lg text-gray-700 hover:bg-[#0F4C81]/5 hover:text-[#0F4C81] transition font-medium" @click="closeMobile()">About Us</a></li>
+          <li x-data="{ open: false }">
+            <button @click="open = !open" class="w-full flex items-center justify-between px-4 py-3 rounded-lg text-gray-700 hover:bg-[#0F4C81]/5 hover:text-[#0F4C81] transition font-medium">
+              Services <i class="fas fa-chevron-down text-xs transition" :class="{ 'rotate-180': open }"></i>
+            </button>
+            <div x-show="open" x-collapse class="ml-4 space-y-1 pb-2">
+              <a href="services.html" class="block px-4 py-2.5 text-sm text-gray-600 hover:text-[#0F4C81] rounded-lg transition" @click="closeMobile()">All Services</a>
+              <a href="services.html#income-tax" class="block px-4 py-2.5 text-sm text-gray-600 hover:text-[#0F4C81] rounded-lg transition" @click="closeMobile()">Income Tax</a>
+              <a href="services.html#vat" class="block px-4 py-2.5 text-sm text-gray-600 hover:text-[#0F4C81] rounded-lg transition" @click="closeMobile()">VAT Consultancy</a>
+              <a href="services.html#tax-return" class="block px-4 py-2.5 text-sm text-gray-600 hover:text-[#0F4C81] rounded-lg transition" @click="closeMobile()">Tax Return</a>
+              <a href="services.html#accounting" class="block px-4 py-2.5 text-sm text-gray-600 hover:text-[#0F4C81] rounded-lg transition" @click="closeMobile()">Accounting</a>
+              <a href="services.html#registration" class="block px-4 py-2.5 text-sm text-gray-600 hover:text-[#0F4C81] rounded-lg transition" @click="closeMobile()">Registration</a>
+              <a href="services.html#financial" class="block px-4 py-2.5 text-sm text-gray-600 hover:text-[#0F4C81] rounded-lg transition" @click="closeMobile()">Financial Consultancy</a>
+            </div>
+          </li>
+          <li><a href="blog.html" class="block px-4 py-3 rounded-lg text-gray-700 hover:bg-[#0F4C81]/5 hover:text-[#0F4C81] transition font-medium" @click="closeMobile()">Blog</a></li>
+          <li><a href="gallery.html" class="block px-4 py-3 rounded-lg text-gray-700 hover:bg-[#0F4C81]/5 hover:text-[#0F4C81] transition font-medium" @click="closeMobile()">Gallery</a></li>
+          <li><a href="faq.html" class="block px-4 py-3 rounded-lg text-gray-700 hover:bg-[#0F4C81]/5 hover:text-[#0F4C81] transition font-medium" @click="closeMobile()">FAQ</a></li>
+          <li><a href="contact.html" class="block px-4 py-3 rounded-lg text-gray-700 hover:bg-[#0F4C81]/5 hover:text-[#0F4C81] transition font-medium" @click="closeMobile()">Contact</a></li>
+        </ul>
+        <div class="mt-4 pt-4 border-t border-gray-100">
+          <a href="appointment.html" class="btn btn-primary w-full" @click="closeMobile()">
+            <i class="fas fa-calendar-check"></i> Book Appointment
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== -->
+  <!-- HERO SECTION          -->
+  <!-- ==================== -->
+  <section class="gradient-hero min-h-[90vh] flex items-center relative overflow-hidden pt-24" role="region" aria-label="Hero banner">
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+      <div class="absolute top-20 right-10 w-96 h-96 rounded-full bg-white/5 blur-3xl"></div>
+      <div class="absolute bottom-20 left-10 w-80 h-80 rounded-full bg-[#F59E0B]/10 blur-3xl"></div>
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-white/[0.02]"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 py-20 relative z-10">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <!-- Hero Content -->
+        <div>
+          <div class="flex items-center gap-3 mb-6" data-aos="fade-up" data-aos-delay="100">
+            <span class="badge badge-accent"><i class="fas fa-check-circle"></i> NBR Approved</span>
+            <span class="badge text-white bg-white/10"><i class="fas fa-star"></i> Since 2010</span>
+          </div>
+
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6" data-aos="fade-up" data-aos-delay="200">
+            Expert <span class="text-[#F59E0B]">VAT & Tax</span> Consultancy <br>in Rangpur, Bangladesh
+          </h1>
+
+          <p class="text-lg md:text-xl text-white/80 leading-relaxed mb-8 max-w-lg" data-aos="fade-up" data-aos-delay="300">
+            Your trusted partner for comprehensive tax solutions, business registration, accounting, and financial consultancy. Professional, reliable, and NBR-approved.
+          </p>
+
+          <div class="flex flex-wrap gap-4" data-aos="fade-up" data-aos-delay="400">
+            <a href="appointment.html" class="btn btn-accent btn-lg">
+              <i class="fas fa-calendar-check"></i> Book Appointment
+            </a>
+            <a href="tel:+8801886135595" class="btn btn-white btn-lg">
+              <i class="fas fa-phone-alt"></i> Call Now
+            </a>
+            <a href="https://wa.me/8801886135595" target="_blank" rel="noopener" class="btn btn-secondary btn-lg">
+              <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+          </div>
+
+          <!-- Trust badges -->
+          <div class="flex flex-wrap items-center gap-6 mt-10" data-aos="fade-up" data-aos-delay="500">
+            <div class="flex items-center gap-2 text-white/70 text-sm">
+              <i class="fas fa-shield-alt text-[#F59E0B]"></i> 100% Confidential
+            </div>
+            <div class="flex items-center gap-2 text-white/70 text-sm">
+              <i class="fas fa-clock text-[#F59E0B]"></i> Quick Service
+            </div>
+            <div class="flex items-center gap-2 text-white/70 text-sm">
+              <i class="fas fa-file-invoice text-[#F59E0B]"></i> NBR Compliant
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Illustration -->
+        <div class="hidden lg:flex justify-center" data-aos="fade-left" data-aos-delay="300">
+          <div class="relative">
+            <div class="w-[500px] h-[500px] rounded-full border-2 border-dashed border-white/20 flex items-center justify-center animate-pulse">
+              <div class="w-[400px] h-[400px] rounded-full bg-white/5 flex items-center justify-center">
+                <div class="w-[300px] h-[300px] rounded-full bg-white/10 flex items-center justify-center">
+                  <div class="text-center">
+                    <div class="w-24 h-24 rounded-2xl bg-white/15 backdrop-blur flex items-center justify-center mx-auto mb-4">
+                      <i class="fas fa-file-invoice text-5xl text-[#F59E0B]"></i>
+                    </div>
+                    <p class="text-white/60 text-sm">NBR Approved</p>
+                    <p class="text-white font-bold text-lg">Tax Consultancy</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Floating elements -->
+            <div class="absolute top-10 right-0 w-16 h-16 rounded-xl bg-white/10 backdrop-blur flex items-center justify-center animate-bounce">
+              <i class="fas fa-calculator text-2xl text-[#F59E0B]"></i>
+            </div>
+            <div class="absolute bottom-20 left-0 w-14 h-14 rounded-xl bg-white/10 backdrop-blur flex items-center justify-center animate-bounce" style="animation-delay: 1s;">
+              <i class="fas fa-chart-line text-xl text-[#0E9F6E]"></i>
+            </div>
+            <div class="absolute top-1/2 -right-10 w-12 h-12 rounded-xl bg-white/10 backdrop-blur flex items-center justify-center animate-bounce" style="animation-delay: 0.5s;">
+              <i class="fas fa-building text-lg text-white"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Wave divider -->
+    <div class="absolute bottom-0 left-0 right-0">
+      <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 60V30C240 10 480 10 720 20C960 30 1200 30 1440 20V60H0Z" fill="#F8FAFC"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ==================== -->
+  <!-- STATISTICS SECTION    -->
+  <!-- ==================== -->
+  <section class="section-padding-sm bg-white border-b border-gray-100" aria-label="Company statistics">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8" x-data="{}">
+        <div class="text-center" data-aos="fade-up">
+          <div x-data="counter" x-init="init()" class="stat-value">
+            <span x-text="prefix"></span><span x-text="value"></span><span x-text="suffix"></span>
+          </div>
+          <p class="stat-label">Clients Served</p>
+          <div class="w-12 h-1 bg-[#0E9F6E] rounded-full mx-auto mt-2"></div>
+        </div>
+        <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+          <div x-data="counter" x-init="init()" class="stat-value" data-target="15" data-suffix="+">
+            <span x-text="prefix"></span><span x-text="value"></span><span x-text="suffix"></span>
+          </div>
+          <p class="stat-label">Years Experience</p>
+          <div class="w-12 h-1 bg-[#0E9F6E] rounded-full mx-auto mt-2"></div>
+        </div>
+        <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+          <div x-data="counter" x-init="init()" class="stat-value" data-target="15" data-suffix="+">
+            <span x-text="prefix"></span><span x-text="value"></span><span x-text="suffix"></span>
+          </div>
+          <p class="stat-label">Services Offered</p>
+          <div class="w-12 h-1 bg-[#0E9F6E] rounded-full mx-auto mt-2"></div>
+        </div>
+        <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+          <div x-data="counter" x-init="init()" class="stat-value" data-target="100" data-suffix="%">
+            <span x-text="prefix"></span><span x-text="value"></span><span x-text="suffix"></span>
+          </div>
+          <p class="stat-label">Client Satisfaction</p>
+          <div class="w-12 h-1 bg-[#0E9F6E] rounded-full mx-auto mt-2"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== -->
+  <!-- ABOUT PREVIEW SECTION -->
+  <!-- ==================== -->
+  <section class="section-padding" aria-label="About us preview">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <!-- Left Image -->
+        <div class="relative" data-aos="fade-right">
+          <div class="aspect-[4/3] rounded-2xl bg-gradient-to-br from-[#0F4C81] to-[#0E9F6E] flex items-center justify-center">
+            <div class="text-center text-white p-8">
+              <div class="w-20 h-20 rounded-2xl bg-white/20 flex items-center justify-center mx-auto mb-4">
+                <i class="fas fa-building text-4xl"></i>
+              </div>
+              <h3 class="text-2xl font-bold">Ajay & Safiullah</h3>
+              <p class="text-white/80">NBR Approved Consultancy Firm</p>
+            </div>
+          </div>
+          <div class="absolute -bottom-6 -right-6 w-40 h-40 rounded-2xl gradient-secondary flex items-center justify-center text-white shadow-xl">
+            <div class="text-center">
+              <p class="text-3xl font-bold">15+</p>
+              <p class="text-sm font-medium">Years</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Content -->
+        <div data-aos="fade-left">
+          <span class="section-subtitle"><i class="fas fa-info-circle"></i> About Us</span>
+          <h2 class="section-title">Your Trusted <span>Tax & VAT</span> Partner in Rangpur</h2>
+          <p class="section-desc mb-6">
+            Ajay & Safiullah Associates is an NBR-approved VAT and Tax Consultancy Firm based in Rangpur, Bangladesh. With over 15 years of experience, we provide comprehensive financial and business solutions to individuals, startups, and established enterprises.
+          </p>
+          <p class="text-gray-500 mb-8 leading-relaxed">
+            Our team of experienced consultants specializes in income tax, VAT management, tax return filing, accounting, business registration, and financial planning. We are committed to delivering professional, confidential, and results-driven services that ensure full compliance with Bangladesh tax regulations.
+          </p>
+
+          <div class="grid grid-cols-2 gap-4 mb-8">
+            <div class="flex items-start gap-3">
+              <div class="w-10 h-10 rounded-lg bg-[#0F4C81]/10 flex items-center justify-center text-[#0F4C81] flex-shrink-0">
+                <i class="fas fa-bullseye"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-sm">Our Mission</h4>
+                <p class="text-xs text-gray-500">Simplify tax compliance for businesses</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-10 h-10 rounded-lg bg-[#0E9F6E]/10 flex items-center justify-center text-[#0E9F6E] flex-shrink-0">
+                <i class="fas fa-eye"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-sm">Our Vision</h4>
+                <p class="text-xs text-gray-500">Leading consultancy in northern Bangladesh</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-10 h-10 rounded-lg bg-[#F59E0B]/10 flex items-center justify-center text-[#F59E0B] flex-shrink-0">
+                <i class="fas fa-handshake"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-sm">Our Values</h4>
+                <p class="text-xs text-gray-500">Integrity, transparency, excellence</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-10 h-10 rounded-lg bg-[#0F4C81]/10 flex items-center justify-center text-[#0F4C81] flex-shrink-0">
+                <i class="fas fa-certificate"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-sm">NBR Approved</h4>
+                <p class="text-xs text-gray-500">Government authorized firm</p>
+              </div>
+            </div>
+          </div>
+
+          <a href="about.html" class="btn btn-primary">
+            Learn More About Us <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== -->
+  <!-- SERVICES SECTION      -->
+  <!-- ==================== -->
+  <section class="section-padding bg-white" aria-label="Our services">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-3xl mx-auto mb-14" data-aos="fade-up">
+        <span class="section-subtitle"><i class="fas fa-briefcase"></i> Our Services</span>
+        <h2 class="section-title">Comprehensive <span>Financial & Tax</span> Solutions</h2>
+        <p class="section-desc mx-auto">
+          We offer a complete range of tax, accounting, and business registration services tailored to meet the unique needs of our clients in Bangladesh.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Service 1 -->
+        <div class="card-premium p-6 group" data-aos="fade-up">
+          <div class="icon-box icon-box-primary mb-4 group-hover:bg-[#0F4C81] group-hover:text-white transition-all duration-300">
+            <i class="fas fa-file-invoice-dollar"></i>
+          </div>
+          <h3 class="text-lg font-bold mb-2">Income Tax</h3>
+          <p class="text-gray-500 text-sm leading-relaxed mb-4">
+            Professional income tax preparation, planning, and filing for individuals and businesses. Maximize deductions and minimize liabilities.
+          </p>
+          <a href="services.html" class="text-[#0F4C81] font-semibold text-sm hover:gap-2 transition-all inline-flex items-center gap-1">
+            Learn More <i class="fas fa-arrow-right text-xs"></i>
+          </a>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="card-premium p-6 group" data-aos="fade-up" data-aos-delay="100">
+          <div class="icon-box icon-box-secondary mb-4 group-hover:bg-[#0E9F6E] group-hover:text-white transition-all duration-300">
+            <i class="fas fa-file-invoice"></i>
+          </div>
+          <h3 class="text-lg font-bold mb-2">VAT Consultancy</h3>
+          <p class="text-gray-500 text-sm leading-relaxed mb-4">
+            Complete VAT management services including registration, return filing, assessment handling, and compliance advisory.
+          </p>
+          <a href="services.html" class="text-[#0E9F6E] font-semibold text-sm hover:gap-2 transition-all inline-flex items-center gap-1">
+            Learn More <i class="fas fa-arrow-right text-xs"></i>
+          </a>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="card-premium p-6 group" data-aos="fade-up" data-aos-delay="200">
+          <div class="icon-box icon-box-accent mb-4 group-hover:bg-[#F59E0B] group-hover:text-white transition-all duration-300">
+            <i class="fas fa-file-export"></i>
+          </div>
+          <h3 class="text-lg font-bold mb-2">Tax Return</h3>
+          <p class="text-gray-500 text-sm leading-relaxed mb-4">
+            Accurate and timely tax return preparation and submission. We ensure compliance with all NBR regulations and deadlines.
+          </p>
+          <a href="services.html" class="text-[#F59E0B] font-semibold text-sm hover:gap-2 transition-all inline-flex items-center gap-1">
+            Learn More <i class="fas fa-arrow-right text-xs"></i>
+          </a>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="card-premium p-6 group" data-aos="fade-up" data-aos-delay="100">
+          <div class="icon-box icon-box-primary mb-4 group-hover:bg-[#0F4C81] group-hover:text-white transition-all duration-300">
+            <i class="fas fa-chart-pie"></i>
+          </div>
+          <h3 class="text-lg font-bold mb-2">Tax Planning</h3>
+          <p class="text-gray-500 text-sm leading-relaxed mb-4">
+            Strategic tax planning to optimize your financial position. We develop customized strategies for effective tax management.
+          </p>
+          <a href="services.html" class="text-[#0F4C81] font-semibold text-sm hover:gap-2 transition-all inline-flex items-center gap-1">
+            Learn More <i class="fas fa-arrow-right text-xs"></i>
+          </a>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="card-premium p-6 group" data-aos="fade-up" data-aos-delay="200">
+          <div class="icon-box icon-box-secondary mb-4 group-hover:bg-[#0E9F6E] group-hover:text-white transition-all duration-300">
+            <i class="fas fa-book"></i>
+          </div>
+          <h3 class="text-lg font-bold mb-2">Accounting & Bookkeeping</h3>
+          <p class="text-gray-500 text-sm leading-relaxed mb-4">
+            Comprehensive accounting and bookkeeping services to maintain accurate financial records and ensure business transparency.
+          </p>
+          <a href="services.html" class="text-[#0E9F6E] font-semibold text-sm hover:gap-2 transition-all inline-flex items-center gap-1">
+            Learn More <i class="fas fa-arrow-right text-xs"></i>
+          </a>
+        </div>
+
+        <!-- Service 6 -->
+        <div class="card-premium p-6 group" data-aos="fade-up" data-aos-delay="300">
+          <div class="icon-box icon-box-accent mb-4 group-hover:bg-[#F59E0B] group-hover:text-white transition-all duration-300">
+            <i class="fas fa-building"></i>
+          </div>
+          <h3 class="text-lg font-bold mb-2">Business Registration</h3>
+          <p class="text-gray-500 text-sm leading-relaxed mb-4">
+            Complete business registration services including company formation, trade license, BIN, TIN, and RJSC registration.
+          </p>
+          <a href="services.html" class="text-[#F59E0B] font-semibold text-sm hover:gap-2 transition-all inline-flex items-center gap-1">
+            Learn More <i class="fas fa-arrow-right text-xs"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="text-center mt-10" data-aos="fade-up">
+        <a href="services.html" class="btn btn-primary btn-lg">
+          View All Services <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== -->
+  <!-- WHY CHOOSE US         -->
+  <!-- ==================== -->
+  <section class="section-padding relative overflow-hidden" aria-label="Why choose us">
+    <div class="absolute inset-0 gradient-primary opacity-[0.03] pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-3xl mx-auto mb-14" data-aos="fade-up">
+        <span class="section-subtitle"><i class="fas fa-check-circle"></i> Why Choose Us</span>
+        <h2 class="section-title">Why <span>Ajay & Safiullah</span> Associates?</h2>
+        <p class="section-desc mx-auto">
+          We stand apart from the competition through our unwavering commitment to excellence, integrity, and client satisfaction.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="card p-6 text-center group" data-aos="fade-up">
+          <div class="w-16 h-16 rounded-2xl bg-[#0F4C81]/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-[#0F4C81] group-hover:text-white transition-all duration-300 text-[#0F4C81]">
+            <i class="fas fa-user-tie text-2xl"></i>
+          </div>
+          <h3 class="font-bold mb-2">Experienced Consultants</h3>
+          <p class="text-gray-500 text-sm">Our team brings over 15 years of combined expertise in tax and financial consultancy.</p>
+        </div>
+
+        <div class="card p-6 text-center group" data-aos="fade-up" data-aos-delay="100">
+          <div class="w-16 h-16 rounded-2xl bg-[#0E9F6E]/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-[#0E9F6E] group-hover:text-white transition-all duration-300 text-[#0E9F6E]">
+            <i class="fas fa-shield-alt text-2xl"></i>
+          </div>
+          <h3 class="font-bold mb-2">Confidential Service</h3>
+          <p class="text-gray-500 text-sm">Your financial information is handled with the utmost confidentiality and security.</p>
+        </div>
+
+        <div class="card p-6 text-center group" data-aos="fade-up" data-aos-delay="200">
+          <div class="w-16 h-16 rounded-2xl bg-[#F59E0B]/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-[#F59E0B] group-hover:text-white transition-all duration-300 text-[#F59E0B]">
+            <i class="fas fa-tags text-2xl"></i>
+          </div>
+          <h3 class="font-bold mb-2">Affordable Pricing</h3>
+          <p class="text-gray-500 text-sm">Premium quality services at competitive and transparent pricing structures.</p>
+        </div>
+
+        <div class="card p-6 text-center group" data-aos="fade-up" data-aos-delay="300">
+          <div class="w-16 h-16 rounded-2xl bg-[#0F4C81]/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-[#0F4C81] group-hover:text-white transition-all duration-300 text-[#0F4C81]">
+            <i class="fas fa-bolt text-2xl"></i>
+          </div>
+          <h3 class="font-bold mb-2">Quick Response</h3>
+          <p class="text-gray-500 text-sm">We respond promptly to all inquiries and complete work within agreed timelines.</p>
+        </div>
+
+        <div class="card p-6 text-center group" data-aos="fade-up" data-aos-delay="100">
+          <div class="w-16 h-16 rounded-2xl bg-[#0E9F6E]/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-[#0E9F6E] group-hover:text-white transition-all duration-300 text-[#0E9F6E]">
+            <i class="fas fa-graduation-cap text-2xl"></i>
+          </div>
+          <h3 class="font-bold mb-2">Professional Guidance</h3>
+          <p class="text-gray-500 text-sm">Expert advice tailored to your specific financial situation and business needs.</p>
+        </div>
+
+        <div class="card p-6 text-center group" data-aos="fade-up" data-aos-delay="200">
+          <div class="w-16 h-16 rounded-2xl bg-[#0F4C81]/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-[#0F4C81] group-hover:text-white transition-all duration-300 text-[#0F4C81]">
+            <i class="fas fa-file-contract text-2xl"></i>
+          </div>
+          <h3 class="font-bold mb-2">NBR Compliance</h3>
+          <p class="text-gray-500 text-sm">Fully compliant with National Board of Revenue regulations and requirements.</p>
+        </div>
+
+        <div class="card p-6 text-center group" data-aos="fade-up" data-aos-delay="300">
+          <div class="w-16 h-16 rounded-2xl bg-[#F59E0B]/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-[#F59E0B] group-hover:text-white transition-all duration-300 text-[#F59E0B]">
+            <i class="fas fa-eye text-2xl"></i>
+          </div>
+          <h3 class="font-bold mb-2">Transparent Process</h3>
+          <p class="text-gray-500 text-sm">Clear communication and full transparency in all our processes and transactions.</p>
+        </div>
+
+        <div class="card p-6 text-center group" data-aos="fade-up" data-aos-delay="400">
+          <div class="w-16 h-16 rounded-2xl bg-[#0F4C81]/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-[#0F4C81] group-hover:text-white transition-all duration-300 text-[#0F4C81]">
+            <i class="fas fa-headset text-2xl"></i>
+          </div>
+          <h3 class="font-bold mb-2">Long-term Support</h3>
+          <p class="text-gray-500 text-sm">Ongoing support and consultation to help you navigate changing regulations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== -->
+  <!-- WORK PROCESS          -->
+  <!-- ==================== -->
+  <section class="section-padding bg-white" aria-label="Our working process">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-3xl mx-auto mb-14" data-aos="fade-up">
+        <span class="section-subtitle"><i class="fas fa-sync-alt"></i> Our Process</span>
+        <h2 class="section-title">How We <span>Work</span></h2>
+        <p class="section-desc mx-auto">
+          Our streamlined process ensures efficient, transparent, and hassle-free service delivery from start to finish.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6">
+        <!-- Step 1 -->
+        <div class="text-center relative group" data-aos="fade-up">
+          <div class="w-20 h-20 rounded-2xl bg-[#0F4C81]/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-[#0F4C81] group-hover:text-white transition-all duration-300 text-[#0F4C81]">
+            <i class="fas fa-phone-alt text-2xl"></i>
+          </div>
+          <span class="w-8 h-8 rounded-full bg-[#0F4C81] text-white text-sm font-bold flex items-center justify-center mx-auto mb-3">01</span>
+          <h3 class="font-bold text-sm mb-1">Contact Us</h3>
+          <p class="text-gray-400 text-xs">Call or book online</p>
+          <div class="hidden xl:block absolute top-10 -right-3 text-[#0F4C81]/30 text-xl">
+            <i class="fas fa-arrow-right"></i>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="text-center relative group" data-aos="fade-up" data-aos-delay="100">
+          <div class="w-20 h-20 rounded-2xl bg-[#0E9F6E]/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-[#0E9F6E] group-hover:text-white transition-all duration-300 text-[#0E9F6E]">
+            <i class="fas fa-comments text-2xl"></i>
+          </div>
+          <span class="w-8 h-8 rounded-full bg-[#0E9F6E] text-white text-sm font-bold flex items-center justify-center mx-auto mb-3">02</span>
+          <h3 class="font-bold text-sm mb-1">Consultation</h3>
+          <p class="text-gray-400 text-xs">Discuss your needs</p>
+          <div class="hidden xl:block absolute top-10 -right-3 text-[#0E9F6E]/30 text-xl">
+            <i class="fas fa-arrow-right"></i>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="text-center relative group" data-aos="fade-up" data-aos-delay="200">
+          <div class="w-20 h-20 rounded-2xl bg-[#F59E0B]/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-[#F59E0B] group-hover:text-white transition-all duration-300 text-[#F59E0B]">
+            <i class="fas fa-folder-open text-2xl"></i>
+          </div>
+          <span class="w-8 h-8 rounded-full bg-[#F59E0B] text-white text-sm font-bold flex items-center justify-center mx-auto mb-3">03</span>
+          <h3 class="font-bold text-sm mb-1">Documents</h3>
+          <p class="text-gray-400 text-xs">Provide documents</p>
+          <div class="hidden xl:block absolute top-10 -right-3 text-[#F59E0B]/30 text-xl">
+            <i class="fas fa-arrow-right"></i>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="text-center relative group" data-aos="fade-up" data-aos-delay="300">
+          <div class="w-20 h-20 rounded-2xl bg-[#0F4C81]/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-[#0F4C81] group-hover:text-white transition-all duration-300 text-[#0F4C81]">
+            <i class="fas fa-cogs text-2xl"></i>
+          </div>
+          <span class="w-8 h-8 rounded-full bg-[#0F4C81] text-white text-sm font-bold flex items-center justify-center mx-auto mb-3">04</span>
+          <h3 class="font-bold text-sm mb-1">Processing</h3>
+          <p class="text-gray-400 text-xs">We handle the work</p>
+          <div class="hidden xl:block absolute top-10 -right-3 text-[#0F4C81]/30 text-xl">
+            <i class="fas fa-arrow-right"></i>
+          </div>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="text-center relative group" data-aos="fade-up" data-aos-delay="400">
+          <div class="w-20 h-20 rounded-2xl bg-[#0E9F6E]/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-[#0E9F6E] group-hover:text-white transition-all duration-300 text-[#0E9F6E]">
+            <i class="fas fa-paper-plane text-2xl"></i>
+          </div>
+          <span class="w-8 h-8 rounded-full bg-[#0E9F6E] text-white text-sm font-bold flex items-center justify-center mx-auto mb-3">05</span>
+          <h3 class="font-bold text-sm mb-1">Submission</h3>
+          <p class="text-gray-400 text-xs">File or submit</p>
+          <div class="hidden xl:block absolute top-10 -right-3 text-[#0E9F6E]/30 text-xl">
+            <i class="fas fa-arrow-right"></i>
+          </div>
+        </div>
+
+        <!-- Step 6 -->
+        <div class="text-center group" data-aos="fade-up" data-aos-delay="500">
+          <div class="w-20 h-20 rounded-2xl bg-[#F59E0B]/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-[#F59E0B] group-hover:text-white transition-all duration-300 text-[#F59E0B]">
+            <i class="fas fa-headset text-2xl"></i>
+          </div>
+          <span class="w-8 h-8 rounded-full bg-[#F59E0B] text-white text-sm font-bold flex items-center justify-center mx-auto mb-3">06</span>
+          <h3 class="font-bold text-sm mb-1">Support</h3>
+          <p class="text-gray-400 text-xs">Ongoing assistance</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== -->
+  <!-- INDUSTRIES WE SERVE   -->
+  <!-- ==================== -->
+  <section class="section-padding" aria-label="Industries we serve">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-3xl mx-auto mb-14" data-aos="fade-up">
+        <span class="section-subtitle"><i class="fas fa-industry"></i> Industries We Serve</span>
+        <h2 class="section-title">Serving <span>Diverse</span> Industries</h2>
+        <p class="section-desc mx-auto">
+          Our expertise spans across multiple industries, providing specialized tax and financial solutions for each sector.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+        <div class="card p-5 text-center group hover:border-[#0F4C81]/30" data-aos="fade-up">
+          <div class="w-12 h-12 rounded-xl bg-[#0F4C81]/10 flex items-center justify-center mx-auto mb-3 group-hover:bg-[#0F4C81] group-hover:text-white transition-all text-[#0F4C81]">
+            <i class="fas fa-store text-xl"></i>
+          </div>
+          <h4 class="font-semibold text-sm">Retail & Wholesale</h4>
+        </div>
+        <div class="card p-5 text-center group hover:border-[#0E9F6E]/30" data-aos="fade-up" data-aos-delay="50">
+          <div class="w-12 h-12 rounded-xl bg-[#0E9F6E]/10 flex items-center justify-center mx-auto mb-3 group-hover:bg-[#0E9F6E] group-hover:text-white transition-all text-[#0E9F6E]">
+            <i class="fas fa-industry text-xl"></i>
+          </div>
+          <h4 class="font-semibold text-sm">Manufacturing</h4>
+        </div>
+        <div class="card p-5 text-center group hover:border-[#F59E0B]/30" data-aos="fade-up" data-aos-delay="100">
+          <div class="w-12 h-12 rounded-xl bg-[#F59E0B]/10 flex items-center justify-center mx-auto mb-3 group-hover:bg-[#F59E0B] group-hover:text-white transition-all text-[#F59E0B]">
+            <i class="fas fa-building text-xl"></i>
+          </div>
+          <h4 class="font-semibold text-sm">Real Estate</h4>
+        </div>
+        <div class="card p-5 text-center group hover:border-[#0F4C81]/30" data-aos="fade-up" data-aos-delay="150">
+          <div class="w-12 h-12 rounded-xl bg-[#0F4C81]/10 flex items-center justify-center mx-auto mb-3 group-hover:bg-[#0F4C81] group-hover:text-white transition-all text-[#0F4C81]">
+            <i class="fas fa-utensils text-xl"></i>
+          </div>
+          <h4 class="font-semibold text-sm">Hospitality</h4>
+        </div>
+        <div class="card p-5 text-center group hover:border-[#0E9F6E]/30" data-aos="fade-up" data-aos-delay="200">
+          <div class="w-12 h-12 rounded-xl bg-[#0E9F6E]/10 flex items-center justify-center mx-auto mb-3 group-hover:bg-[#0E9F6E] group-hover:text-white transition-all text-[#0E9F6E]">
+            <i class="fas fa-truck text-xl"></i>
+          </div>
+          <h4 class="font-semibold text-sm">Transport</h4>
+        </div>
+        <div class="card p-5 text-center group hover:border-[#F59E0B]/30" data-aos="fade-up" data-aos-delay="250">
+          <div class="w-12 h-12 rounded-xl bg-[#F59E0B]/10 flex items-center justify-center mx-auto mb-3 group-hover:bg-[#F59E0B] group-hover:text-white transition-all text-[#F59E0B]">
+            <i class="fas fa-laptop text-xl"></i>
+          </div>
+          <h4 class="font-semibold text-sm">IT Services</h4>
+        </div>
+        <div class="card p-5 text-center group hover:border-[#0F4C81]/30" data-aos="fade-up" data-aos-delay="300">
+          <div class="w-12 h-12 rounded-xl bg-[#0F4C81]/10 flex items-center justify-center mx-auto mb-3 group-hover:bg-[#0F4C81] group-hover:text-white transition-all text-[#0F4C81]">
+            <i class="fas fa-heartbeat text-xl"></i>
+          </div>
+          <h4 class="font-semibold text-sm">Healthcare</h4>
+        </div>
+        <div class="card p-5 text-center group hover:border-[#0E9F6E]/30" data-aos="fade-up" data-aos-delay="350">
+          <div class="w-12 h-12 rounded-xl bg-[#0E9F6E]/10 flex items-center justify-center mx-auto mb-3 group-hover:bg-[#0E9F6E] group-hover:text-white transition-all text-[#0E9F6E]">
+            <i class="fas fa-graduation-cap text-xl"></i>
+          </div>
+          <h4 class="font-semibold text-sm">Education</h4>
+        </div>
+        <div class="card p-5 text-center group hover:border-[#F59E0B]/30" data-aos="fade-up" data-aos-delay="400">
+          <div class="w-12 h-12 rounded-xl bg-[#F59E0B]/10 flex items-center justify-center mx-auto mb-3 group-hover:bg-[#F59E0B] group-hover:text-white transition-all text-[#F59E0B]">
+            <i class="fas fa-hand-holding-usd text-xl"></i>
+          </div>
+          <h4 class="font-semibold text-sm">NGO</h4>
+        </div>
+        <div class="card p-5 text-center group hover:border-[#0F4C81]/30" data-aos="fade-up" data-aos-delay="450">
+          <div class="w-12 h-12 rounded-xl bg-[#0F4C81]/10 flex items-center justify-center mx-auto mb-3 group-hover:bg-[#0F4C81] group-hover:text-white transition-all text-[#0F4C81]">
+            <i class="fas fa-tshirt text-xl"></i>
+          </div>
+          <h4 class="font-semibold text-sm">Textile & Garments</h4>
+        </div>
+        <div class="card p-5 text-center group hover:border-[#0E9F6E]/30" data-aos="fade-up" data-aos-delay="500">
+          <div class="w-12 h-12 rounded-xl bg-[#0E9F6E]/10 flex items-center justify-center mx-auto mb-3 group-hover:bg-[#0E9F6E] group-hover:text-white transition-all text-[#0E9F6E]">
+            <i class="fas fa-fish text-xl"></i>
+          </div>
+          <h4 class="font-semibold text-sm">Agriculture</h4>
+        </div>
+        <div class="card p-5 text-center group hover:border-[#F59E0B]/30" data-aos="fade-up" data-aos-delay="550">
+          <div class="w-12 h-12 rounded-xl bg-[#F59E0B]/10 flex items-center justify-center mx-auto mb-3 group-hover:bg-[#F59E0B] group-hover:text-white transition-all text-[#F59E0B]">
+            <i class="fas fa-ship text-xl"></i>
+          </div>
+          <h4 class="font-semibold text-sm">Import & Export</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== -->
+  <!-- TESTIMONIALS SECTION   -->
+  <!-- ==================== -->
+  <section class="section-padding bg-white" aria-label="Client testimonials">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-3xl mx-auto mb-14" data-aos="fade-up">
+        <span class="section-subtitle"><i class="fas fa-comments"></i> Testimonials</span>
+        <h2 class="section-title">What Our <span>Clients</span> Say</h2>
+        <p class="section-desc mx-auto">
+          Hear from our satisfied clients across Rangpur and beyond who trust us with their tax and financial needs.
+        </p>
+      </div>
+
+      <div x-data="testimonials()" class="relative" data-aos="fade-up">
+        <!-- Testimonial Cards -->
+        <div class="grid md:grid-cols-3 gap-6">
+          <template x-for="(testimonial, index) in testimonials" :key="index">
+            <div x-show="Math.abs(current - index) < 3" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4" x-transition:enter-end="opacity-100 translate-y-0" class="card-premium p-8">
+              <!-- Stars -->
+              <div class="flex items-center gap-1 mb-4">
+                <template x-for="i in testimonial.rating" :key="i">
+                  <i class="fas fa-star text-[#F59E0B] text-sm"></i>
+                </template>
+              </div>
+              <!-- Content -->
+              <p class="text-gray-600 leading-relaxed mb-6 italic" x-text="testimonial.content"></p>
+              <!-- Author -->
+              <div class="flex items-center gap-3 pt-4 border-t border-gray-100">
+                <div class="w-12 h-12 rounded-full bg-[#0F4C81]/10 flex items-center justify-center text-[#0F4C81] font-bold" x-text="testimonial.initials"></div>
+                <div>
+                  <h4 class="font-bold text-sm" x-text="testimonial.name"></h4>
+                  <p class="text-xs text-gray-400" x-text="testimonial.role"></p>
+                </div>
+              </div>
+            </div>
+          </template>
+        </div>
+
+        <!-- Navigation -->
+        <div class="flex items-center justify-center gap-4 mt-8">
+          <button @click="prev()" class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center hover:bg-[#0F4C81] hover:text-white hover:border-[#0F4C81] transition" aria-label="Previous testimonial">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <div class="flex items-center gap-2">
+            <template x-for="(_, index) in testimonials" :key="index">
+              <button @click="goTo(index)" class="w-2.5 h-2.5 rounded-full transition" :class="current === index ? 'bg-[#0F4C81] w-8' : 'bg-gray-300 hover:bg-gray-400'" :aria-label="'Go to testimonial ' + (index + 1)"></button>
+            </template>
+          </div>
+          <button @click="next()" class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center hover:bg-[#0F4C81] hover:text-white hover:border-[#0F4C81] transition" aria-label="Next testimonial">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== -->
+  <!-- LATEST BLOG SECTION   -->
+  <!-- ==================== -->
+  <section class="section-padding" aria-label="Latest blog posts">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14" data-aos="fade-up">
+        <div>
+          <span class="section-subtitle"><i class="fas fa-newspaper"></i> Our Blog</span>
+          <h2 class="section-title mb-0">Latest <span>Articles</span> & Insights</h2>
+        </div>
+        <a href="blog.html" class="btn btn-outline btn-sm flex-shrink-0">
+          View All Posts <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" x-data="blogSearch()">
+        <template x-for="(post, index) in posts.slice(0, 3)" :key="post.id">
+          <a :href="'blog-single.html?slug=' + post.slug" class="blog-card group text-decoration-none" data-aos="fade-up" :data-aos-delay="index * 100">
+            <div class="h-48 gradient-primary flex items-center justify-center text-white/30 overflow-hidden">
+              <i class="fas fa-newspaper text-6xl group-hover:scale-110 transition duration-500"></i>
+            </div>
+            <div class="blog-card-body">
+              <div class="flex items-center gap-3 mb-3">
+                <span class="badge badge-primary text-xs" x-text="post.category"></span>
+                <span class="text-xs text-gray-400" x-text="post.date"></span>
+              </div>
+              <h3 class="font-bold mb-2 group-hover:text-[#0F4C81] transition" x-text="post.title"></h3>
+              <p class="text-gray-500 text-sm leading-relaxed mb-4 line-clamp-2" x-text="post.excerpt"></p>
+              <span class="text-[#0F4C81] font-semibold text-sm inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+                Read More <i class="fas fa-arrow-right text-xs"></i>
+              </span>
+            </div>
+          </a>
+        </template>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== -->
+  <!-- FAQ SECTION           -->
+  <!-- ==================== -->
+  <section class="section-padding bg-white" aria-label="Frequently asked questions">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center max-w-3xl mx-auto mb-14" data-aos="fade-up">
+        <span class="section-subtitle"><i class="fas fa-question-circle"></i> FAQ</span>
+        <h2 class="section-title">Frequently Asked <span>Questions</span></h2>
+        <p class="section-desc mx-auto">
+          Find answers to common questions about our services and tax consultancy.
+        </p>
+      </div>
+
+      <div x-data="faqAccordion()" class="space-y-3" data-aos="fade-up">
+        <div class="faq-item card overflow-hidden">
+          <button @click="toggle(0)" class="faq-question w-full flex items-center justify-between p-5 text-left font-semibold hover:bg-gray-50 transition" :class="{ 'text-[#0F4C81]': activeItem === 0 }">
+            <span>What services does Ajay & Safiullah Associates provide?</span>
+            <i class="fas fa-chevron-down transition duration-300" :class="{ 'rotate-180': activeItem === 0 }"></i>
+          </button>
+          <div x-show="activeItem === 0" x-collapse>
+            <div class="faq-answer px-5 pb-5 text-gray-500 text-sm leading-relaxed">
+              We provide a comprehensive range of services including Income Tax filing, VAT Consultancy, Tax Return preparation, Tax Planning, Accounting & Bookkeeping, Payroll Management, Business Registration (BIN, TIN, RJSC, Trade License), Company Formation, Financial Consultancy, and Audit Support.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item card overflow-hidden">
+          <button @click="toggle(1)" class="faq-question w-full flex items-center justify-between p-5 text-left font-semibold hover:bg-gray-50 transition" :class="{ 'text-[#0F4C81]': activeItem === 1 }">
+            <span>Is your firm approved by NBR?</span>
+            <i class="fas fa-chevron-down transition duration-300" :class="{ 'rotate-180': activeItem === 1 }"></i>
+          </button>
+          <div x-show="activeItem === 1" x-collapse>
+            <div class="faq-answer px-5 pb-5 text-gray-500 text-sm leading-relaxed">
+              Yes, Ajay & Safiullah Associates is an NBR-approved VAT & Tax Consultancy Firm. We are fully authorized and compliant with all National Board of Revenue regulations and requirements.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item card overflow-hidden">
+          <button @click="toggle(2)" class="faq-question w-full flex items-center justify-between p-5 text-left font-semibold hover:bg-gray-50 transition" :class="{ 'text-[#0F4C81]': activeItem === 2 }">
+            <span>How can I book an appointment?</span>
+            <i class="fas fa-chevron-down transition duration-300" :class="{ 'rotate-180': activeItem === 2 }"></i>
+          </button>
+          <div x-show="activeItem === 2" x-collapse>
+            <div class="faq-answer px-5 pb-5 text-gray-500 text-sm leading-relaxed">
+              You can book an appointment by calling us at 01886-135595 or 01714-086432, sending us a WhatsApp message, or using our online appointment booking form on the Appointment page. We typically respond within 24 hours.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item card overflow-hidden">
+          <button @click="toggle(3)" class="faq-question w-full flex items-center justify-between p-5 text-left font-semibold hover:bg-gray-50 transition" :class="{ 'text-[#0F4C81]': activeItem === 3 }">
+            <span>What documents are needed for tax return filing?</span>
+            <i class="fas fa-chevron-down transition duration-300" :class="{ 'rotate-180': activeItem === 3 }"></i>
+          </button>
+          <div x-show="activeItem === 3" x-collapse>
+            <div class="faq-answer px-5 pb-5 text-gray-500 text-sm leading-relaxed">
+              Required documents typically include your TIN certificate, previous year tax return, bank statements, salary certificates, investment proofs, property documents, and business financial statements. Our team will provide a complete checklist during consultation.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item card overflow-hidden">
+          <button @click="toggle(4)" class="faq-question w-full flex items-center justify-between p-5 text-left font-semibold hover:bg-gray-50 transition" :class="{ 'text-[#0F4C81]': activeItem === 4 }">
+            <span>What are your office hours?</span>
+            <i class="fas fa-chevron-down transition duration-300" :class="{ 'rotate-180': activeItem === 4 }"></i>
+          </button>
+          <div x-show="activeItem === 4" x-collapse>
+            <div class="faq-answer px-5 pb-5 text-gray-500 text-sm leading-relaxed">
+              Our office is open from Saturday to Thursday, 9:00 AM to 6:00 PM. We are closed on Friday. Special appointments can be arranged outside business hours upon request.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item card overflow-hidden">
+          <button @click="toggle(5)" class="faq-question w-full flex items-center justify-between p-5 text-left font-semibold hover:bg-gray-50 transition" :class="{ 'text-[#0F4C81]': activeItem === 5 }">
+            <span>How much do your services cost?</span>
+            <i class="fas fa-chevron-down transition duration-300" :class="{ 'rotate-180': activeItem === 5 }"></i>
+          </button>
+          <div x-show="activeItem === 5" x-collapse>
+            <div class="faq-answer px-5 pb-5 text-gray-500 text-sm leading-relaxed">
+              Our fees vary depending on the complexity and scope of services required. We offer competitive and transparent pricing. Contact us for a free consultation and customized quote tailored to your specific needs.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-8" data-aos="fade-up">
+        <a href="faq.html" class="text-[#0F4C81] font-semibold hover:gap-2 transition-all inline-flex items-center gap-1">
+          View All FAQs <i class="fas fa-arrow-right text-xs"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== -->
+  <!-- APPOINTMENT CTA       -->
+  <!-- ==================== -->
+  <section class="section-padding gradient-section relative overflow-hidden" aria-label="Call to action">
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+      <div class="absolute bottom-0 left-0 w-80 h-80 bg-white/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
+    </div>
+
+    <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+      <div data-aos="fade-up">
+        <span class="badge text-white bg-white/20 mb-4"><i class="fas fa-calendar-check"></i> Book Now</span>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4">
+          Ready to Simplify Your <span class="text-[#F59E0B]">Tax & Financial</span> Matters?
+        </h2>
+        <p class="text-white/80 text-lg mb-8 max-w-2xl mx-auto">
+          Schedule a consultation with our expert team today. We'll help you navigate Bangladesh's tax regulations with confidence and ease.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="appointment.html" class="btn btn-accent btn-lg">
+            <i class="fas fa-calendar-check"></i> Book Appointment
+          </a>
+          <a href="tel:+8801886135595" class="btn btn-white btn-lg">
+            <i class="fas fa-phone-alt"></i> Call 01886-135595
+          </a>
+          <a href="https://wa.me/8801886135595" target="_blank" rel="noopener" class="btn bg-[#25D366] text-white btn-lg hover:bg-[#128C7E]">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== -->
+  <!-- CONTACT SECTION       -->
+  <!-- ==================== -->
+  <section class="section-padding bg-white" aria-label="Contact information">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-3xl mx-auto mb-14" data-aos="fade-up">
+        <span class="section-subtitle"><i class="fas fa-address-card"></i> Contact</span>
+        <h2 class="section-title">Get In <span>Touch</span> With Us</h2>
+        <p class="section-desc mx-auto">
+          Have questions or need assistance? Reach out to us through any of the channels below.
+        </p>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-12 items-start">
+        <!-- Contact Info -->
+        <div class="space-y-6" data-aos="fade-right">
+          <div class="card-premium p-6 flex items-start gap-4">
+            <div class="w-14 h-14 rounded-2xl bg-[#0F4C81]/10 flex items-center justify-center text-[#0F4C81] flex-shrink-0">
+              <i class="fas fa-map-marker-alt text-xl"></i>
+            </div>
+            <div>
+              <h3 class="font-bold mb-1">Our Office</h3>
+              <p class="text-gray-500 text-sm">Samabay Market (2nd Floor), Rangpur, Bangladesh</p>
+            </div>
+          </div>
+
+          <div class="card-premium p-6 flex items-start gap-4">
+            <div class="w-14 h-14 rounded-2xl bg-[#0E9F6E]/10 flex items-center justify-center text-[#0E9F6E] flex-shrink-0">
+              <i class="fas fa-phone-alt text-xl"></i>
+            </div>
+            <div>
+              <h3 class="font-bold mb-1">Phone</h3>
+              <p class="text-gray-500 text-sm">01886-135595 / 01714-086432</p>
+              <a href="tel:+8801886135595" class="text-[#0F4C81] text-sm font-semibold hover:underline">Call Now</a>
+            </div>
+          </div>
+
+          <div class="card-premium p-6 flex items-start gap-4">
+            <div class="w-14 h-14 rounded-2xl bg-[#F59E0B]/10 flex items-center justify-center text-[#F59E0B] flex-shrink-0">
+              <i class="fab fa-whatsapp text-xl"></i>
+            </div>
+            <div>
+              <h3 class="font-bold mb-1">WhatsApp</h3>
+              <p class="text-gray-500 text-sm">01886-135595</p>
+              <a href="https://wa.me/8801886135595" target="_blank" rel="noopener" class="text-[#0E9F6E] text-sm font-semibold hover:underline">Send Message</a>
+            </div>
+          </div>
+
+          <div class="card-premium p-6 flex items-start gap-4">
+            <div class="w-14 h-14 rounded-2xl bg-[#0F4C81]/10 flex items-center justify-center text-[#0F4C81] flex-shrink-0">
+              <i class="fas fa-envelope text-xl"></i>
+            </div>
+            <div>
+              <h3 class="font-bold mb-1">Email</h3>
+              <p class="text-gray-500 text-sm">info@ajaysafiullah.com</p>
+              <a href="mailto:info@ajaysafiullah.com" class="text-[#0F4C81] text-sm font-semibold hover:underline">Send Email</a>
+            </div>
+          </div>
+
+          <div class="card-premium p-6 flex items-start gap-4">
+            <div class="w-14 h-14 rounded-2xl bg-[#0E9F6E]/10 flex items-center justify-center text-[#0E9F6E] flex-shrink-0">
+              <i class="fas fa-clock text-xl"></i>
+            </div>
+            <div>
+              <h3 class="font-bold mb-1">Business Hours</h3>
+              <p class="text-gray-500 text-sm">Saturday - Thursday: 9:00 AM - 6:00 PM</p>
+              <p class="text-gray-400 text-sm">Friday: Closed</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div x-data="contactForm()" class="card-premium p-8" data-aos="fade-left">
+          <h3 class="text-xl font-bold mb-6">Send Us a Message</h3>
+
+          <div x-show="!submitted">
+            <form @submit.prevent="submit()" class="space-y-4">
+              <div>
+                <label class="form-label" for="contact-name">Your Name *</label>
+                <input x-model="formData.name" type="text" id="contact-name" class="form-input" :class="{ 'error': errors.name }" placeholder="Enter your full name" required>
+                <p x-show="errors.name" x-text="errors.name" class="text-red-500 text-xs mt-1"></p>
+              </div>
+
+              <div class="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="form-label" for="contact-email">Email *</label>
+                  <input x-model="formData.email" type="email" id="contact-email" class="form-input" :class="{ 'error': errors.email }" placeholder="your@email.com" required>
+                  <p x-show="errors.email" x-text="errors.email" class="text-red-500 text-xs mt-1"></p>
+                </div>
+                <div>
+                  <label class="form-label" for="contact-phone">Phone *</label>
+                  <input x-model="formData.phone" type="tel" id="contact-phone" class="form-input" :class="{ 'error': errors.phone }" placeholder="01XXXXXXXXX" required>
+                  <p x-show="errors.phone" x-text="errors.phone" class="text-red-500 text-xs mt-1"></p>
+                </div>
+              </div>
+
+              <div>
+                <label class="form-label" for="contact-subject">Subject *</label>
+                <input x-model="formData.subject" type="text" id="contact-subject" class="form-input" :class="{ 'error': errors.subject }" placeholder="What is this about?" required>
+                <p x-show="errors.subject" x-text="errors.subject" class="text-red-500 text-xs mt-1"></p>
+              </div>
+
+              <div>
+                <label class="form-label" for="contact-message">Message *</label>
+                <textarea x-model="formData.message" id="contact-message" rows="4" class="form-input" :class="{ 'error': errors.message }" placeholder="Write your message here..." required></textarea>
+                <p x-show="errors.message" x-text="errors.message" class="text-red-500 text-xs mt-1"></p>
+              </div>
+
+              <button type="submit" class="btn btn-primary w-full" :disabled="loading">
+                <template x-if="!loading">
+                  <span>Send Message <i class="fas fa-paper-plane"></i></span>
+                </template>
+                <template x-if="loading">
+                  <span class="flex items-center gap-2"><span class="spinner"></span> Sending...</span>
+                </template>
+              </button>
+            </form>
+          </div>
+
+          <div x-show="submitted" x-cloak class="text-center py-8">
+            <div class="w-20 h-20 rounded-full bg-[#0E9F6E]/10 flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-check-circle text-4xl text-[#0E9F6E]"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Message Sent Successfully!</h3>
+            <p class="text-gray-500">Thank you for reaching out. We will get back to you within 24 hours.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== -->
+  <!-- FOOTER                -->
+  <!-- ==================== -->
+  <footer class="bg-[#0a3a63] text-white" role="contentinfo">
+    <!-- Main Footer -->
+    <div class="max-w-7xl mx-auto px-6 py-16">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        <!-- Company Info -->
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-white">
+              <i class="fas fa-calculator"></i>
+            </div>
+            <div>
+              <h3 class="font-extrabold text-lg leading-tight">Ajay & Safiullah</h3>
+              <p class="text-[10px] font-semibold text-[#F59E0B] tracking-wider uppercase leading-tight">VAT & Tax Consultancy</p>
+            </div>
+          </div>
+          <p class="text-white/70 text-sm leading-relaxed mb-4">
+            NBR-approved VAT & Tax Consultancy Firm in Rangpur, Bangladesh. Providing professional tax, accounting, and business registration services since 2010.
+          </p>
+          <div class="flex items-center gap-3">
+            <a href="#" class="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-[#F59E0B] transition text-sm" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-[#F59E0B] transition text-sm" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" class="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-[#F59E0B] transition text-sm" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-[#F59E0B] transition text-sm" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h3 class="font-bold text-lg mb-4">Quick Links</h3>
+          <ul class="space-y-3 list-none m-0 p-0">
+            <li><a href="index.html" class="text-white/70 hover:text-white transition text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-[#F59E0B]"></i> Home</a></li>
+            <li><a href="about.html" class="text-white/70 hover:text-white transition text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-[#F59E0B]"></i> About Us</a></li>
+            <li><a href="services.html" class="text-white/70 hover:text-white transition text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-[#F59E0B]"></i> Services</a></li>
+            <li><a href="blog.html" class="text-white/70 hover:text-white transition text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-[#F59E0B]"></i> Blog</a></li>
+            <li><a href="gallery.html" class="text-white/70 hover:text-white transition text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-[#F59E0B]"></i> Gallery</a></li>
+            <li><a href="faq.html" class="text-white/70 hover:text-white transition text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-[#F59E0B]"></i> FAQ</a></li>
+            <li><a href="contact.html" class="text-white/70 hover:text-white transition text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-[#F59E0B]"></i> Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div>
+          <h3 class="font-bold text-lg mb-4">Our Services</h3>
+          <ul class="space-y-3 list-none m-0 p-0">
+            <li><a href="services.html" class="text-white/70 hover:text-white transition text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-[#F59E0B]"></i> Income Tax</a></li>
+            <li><a href="services.html" class="text-white/70 hover:text-white transition text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-[#F59E0B]"></i> VAT Consultancy</a></li>
+            <li><a href="services.html" class="text-white/70 hover:text-white transition text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-[#F59E0B]"></i> Tax Return</a></li>
+            <li><a href="services.html" class="text-white/70 hover:text-white transition text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-[#F59E0B]"></i> Accounting</a></li>
+            <li><a href="services.html" class="text-white/70 hover:text-white transition text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-[#F59E0B]"></i> Business Registration</a></li>
+            <li><a href="services.html" class="text-white/70 hover:text-white transition text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-[#F59E0B]"></i> Financial Consultancy</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h3 class="font-bold text-lg mb-4">Contact Info</h3>
+          <ul class="space-y-4 list-none m-0 p-0">
+            <li class="flex items-start gap-3">
+              <i class="fas fa-map-marker-alt text-[#F59E0B] mt-1"></i>
+              <span class="text-white/70 text-sm">Samabay Market (2nd Floor), Rangpur, Bangladesh</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fas fa-phone-alt text-[#F59E0B] mt-1"></i>
+              <div class="text-white/70 text-sm">
+                <p class="m-0">01886-135595</p>
+                <p class="m-0">01714-086432</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fas fa-envelope text-[#F59E0B] mt-1"></i>
+              <span class="text-white/70 text-sm">info@ajaysafiullah.com</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fas fa-clock text-[#F59E0B] mt-1"></i>
+              <div class="text-white/70 text-sm">
+                <p class="m-0">Sat - Thu: 9:00 AM - 6:00 PM</p>
+                <p class="m-0">Friday: Closed</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="border-t border-white/10">
+      <div class="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-white/60 text-sm m-0">
+          &copy; 2026 Ajay & Safiullah Associates. All rights reserved.
+        </p>
+        <div class="flex items-center gap-4">
+          <a href="privacy-policy.html" class="text-white/60 hover:text-white transition text-sm">Privacy Policy</a>
+          <a href="terms.html" class="text-white/60 hover:text-white transition text-sm">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== -->
+  <!-- SCRIPTS               -->
+  <!-- ==================== -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js" defer></script>
+  <script src="assets/js/alpine.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

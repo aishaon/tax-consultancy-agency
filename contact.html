@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en" x-data="navbar()">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Ajay & Safiullah Associates - VAT & Tax Consultancy Rangpur</title>
+  <meta name="description" content="Contact Ajay & Safiullah Associates in Rangpur, Bangladesh. Call 01886-135595, email info@ajaysafiullah.com, or visit our office at Samabay Market.">
+  <link rel="canonical" href="https://www.ajaysafiullah.com/contact.html">
+  <meta property="og:title" content="Contact Us | Ajay & Safiullah Associates">
+  <meta property="og:description" content="Reach out to our expert tax consultancy team in Rangpur, Bangladesh.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+  tailwind.config = {
+    theme: { extend: { colors: { primary: '#0F4C81', secondary: '#0E9F6E', accent: '#F59E0B' } } }
+  }
+  </script>
+  <link rel="stylesheet" href="assets/css/custom.css">
+  <style>[x-cloak]{display:none!important}</style>
+</head>
+<body>
+
+  <div x-data="toast()" x-show="show" x-cloak class="toast" :class="{'show':show}" role="alert" aria-live="polite">
+    <div class="toast-icon"><i class="fas fa-check-circle"></i></div>
+    <div><p class="font-semibold text-sm" x-text="message"></p></div>
+    <button @click="close()" class="ml-auto text-gray-400 hover:text-gray-600 transition" aria-label="Close"><i class="fas fa-times"></i></button>
+  </div>
+
+  <button class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+  <!-- Top Bar -->
+  <div class="hidden lg:block bg-[#0F4C81] text-white text-sm py-2">
+    <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+      <div class="flex items-center gap-6">
+        <a href="tel:+8801886135595" class="hover:text-[#F59E0B] transition flex items-center gap-2"><i class="fas fa-phone-alt text-[#F59E0B]"></i> +880 1886-135595</a>
+        <a href="tel:+8801714086432" class="hover:text-[#F59E0B] transition flex items-center gap-2"><i class="fas fa-phone-alt text-[#F59E0B]"></i> +880 1714-086432</a>
+        <a href="mailto:info@ajaysafiullah.com" class="hover:text-[#F59E0B] transition flex items-center gap-2"><i class="fas fa-envelope text-[#F59E0B]"></i> info@ajaysafiullah.com</a>
+      </div>
+      <div class="flex items-center gap-4">
+        <span class="flex items-center gap-2"><i class="fas fa-map-marker-alt text-[#F59E0B]"></i> Samabay Market, Rangpur</span>
+        <div class="flex items-center gap-3 ml-4">
+          <a href="#" class="hover:text-[#F59E0B] transition" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="hover:text-[#F59E0B] transition" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="#" class="hover:text-[#F59E0B] transition" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="hover:text-[#F59E0B] transition" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="navbar" :class="{'navbar-scrolled':scrolled,'navbar-hidden':hidden}" role="banner">
+    <nav class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between" aria-label="Main navigation">
+      <a href="index.html" class="flex items-center gap-3 text-decoration-none" aria-label="Home">
+        <div class="w-10 h-10 rounded-xl gradient-primary flex items-center justify-center text-white font-bold text-lg"><i class="fas fa-calculator"></i></div>
+        <div><h1 class="text-lg font-extrabold text-[#0F4C81] leading-tight m-0">Ajay & Safiullah</h1><p class="text-[10px] font-semibold text-[#0E9F6E] tracking-wider uppercase m-0 leading-tight">VAT & Tax Consultancy</p></div>
+      </a>
+      <ul class="hidden lg:flex items-center gap-8 list-none m-0 p-0">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li class="relative" @mouseenter="toggleDropdown('services')" @mouseleave="closeDropdown()">
+          <a href="services.html" class="nav-link flex items-center gap-1">Services <i class="fas fa-chevron-down text-xs"></i></a>
+          <div x-show="activeDropdown==='services'" x-cloak x-transition class="absolute top-full left-0 mt-2 w-64 glass rounded-xl shadow-xl py-3 z-50">
+            <div class="grid gap-1 px-2">
+              <a href="services.html#income-tax" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-[#0F4C81]/5 rounded-lg transition font-medium">Income Tax</a>
+              <a href="services.html#vat" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-[#0F4C81]/5 rounded-lg transition font-medium">VAT Consultancy</a>
+              <a href="services.html#tax-return" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-[#0F4C81]/5 rounded-lg transition font-medium">Tax Return</a>
+              <a href="services.html#accounting" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-[#0F4C81]/5 rounded-lg transition font-medium">Accounting & Bookkeeping</a>
+              <a href="services.html#registration" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-[#0F4C81]/5 rounded-lg transition font-medium">Business Registration</a>
+              <a href="services.html#financial" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-[#0F4C81]/5 rounded-lg transition font-medium">Financial Consultancy</a>
+              <a href="services.html" class="block px-4 py-2.5 text-sm text-[#0F4C81] font-bold hover:bg-[#0F4C81]/5 rounded-lg transition">View All Services →</a>
+            </div>
+          </div>
+        </li>
+        <li><a href="blog.html" class="nav-link">Blog</a></li>
+        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="faq.html" class="nav-link">FAQ</a></li>
+        <li><a href="contact.html" class="nav-link active-link" aria-current="page">Contact</a></li>
+      </ul>
+      <div class="flex items-center gap-3">
+        <a href="appointment.html" class="btn btn-primary btn-sm hidden sm:inline-flex"><i class="fas fa-calendar-check"></i> Book Now</a>
+        <button @click="toggleMobile()" class="lg:hidden w-10 h-10 rounded-lg border border-gray-200 flex items-center justify-center text-gray-700 hover:bg-gray-100 transition" aria-label="Toggle mobile menu" :aria-expanded="mobileOpen">
+          <i class="fas fa-bars" x-show="!mobileOpen"></i>
+          <i class="fas fa-times" x-show="mobileOpen" x-cloak></i>
+        </button>
+      </div>
+    </nav>
+    <div x-show="mobileOpen" x-cloak x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 -translate-y-4" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-4" class="lg:hidden border-t border-gray-100 bg-white shadow-lg" role="navigation" aria-label="Mobile navigation">
+      <div class="max-w-7xl mx-auto px-6 py-4">
+        <ul class="list-none m-0 p-0 space-y-1">
+          <li><a href="index.html" @click="closeMobile()" class="block px-4 py-3 rounded-lg text-gray-700 hover:bg-[#0F4C81]/5 hover:text-[#0F4C81] transition font-medium">Home</a></li>
+          <li><a href="about.html" @click="closeMobile()" class="block px-4 py-3 rounded-lg text-gray-700 hover:bg-[#0F4C81]/5 hover:text-[#0F4C81] transition font-medium">About Us</a></li>
+          <li x-data="{open:false}"><button @click="open=!open" class="w-full flex items-center justify-between px-4 py-3 rounded-lg text-gray-700 hover:bg-[#0F4C81]/5 hover:text-[#0F4C81] transition font-medium">Services <i class="fas fa-chevron-down text-xs transition" :class="{'rotate-180':open}"></i></button>
+            <div x-show="open" x-collapse class="ml-4 space-y-1 pb-2">
+              <a href="services.html" @click="closeMobile()" class="block px-4 py-2.5 text-sm text-gray-600 hover:text-[#0F4C81] rounded-lg transition">All Services</a>
+              <a href="services.html#income-tax" @click="closeMobile()" class="block px-4 py-2.5 text-sm text-gray-600 hover:text-[#0F4C81] rounded-lg transition">Income Tax</a>
+              <a href="services.html#vat" @click="closeMobile()" class="block px-4 py-2.5 text-sm text-gray-600 hover:text-[#0F4C81] rounded-lg transition">VAT Consultancy</a>
+              <a href="services.html#tax-return" @click="closeMobile()" class="block px-4 py-2.5 text-sm text-gray-600 hover:text-[#0F4C81] rounded-lg transition">Tax Return</a>
+              <a href="services.html#accounting" @click="closeMobile()" class="block px-4 py-2.5 text-sm text-gray-600 hover:text-[#0F4C81] rounded-lg transition">Accounting</a>
+              <a href="services.html#registration" @click="closeMobile()" class="block px-4 py-2.5 text-sm text-gray-600 hover:text-[#0F4C81] rounded-lg transition">Registration</a>
+              <a href="services.html#financial" @click="closeMobile()" class="block px-4 py-2.5 text-sm text-gray-600 hover:text-[#0F4C81] rounded-lg transition">Financial Consultancy</a>
+            </div>
+          </li>
+          <li><a href="blog.html" @click="closeMobile()" class="block px-4 py-3 rounded-lg text-gray-700 hover:bg-[#0F4C81]/5 hover:text-[#0F4C81] transition font-medium">Blog</a></li>
+          <li><a href="gallery.html" @click="closeMobile()" class="block px-4 py-3 rounded-lg text-gray-700 hover:bg-[#0F4C81]/5 hover:text-[#0F4C81] transition font-medium">Gallery</a></li>
+          <li><a href="faq.html" @click="closeMobile()" class="block px-4 py-3 rounded-lg text-gray-700 hover:bg-[#0F4C81]/5 hover:text-[#0F4C81] transition font-medium">FAQ</a></li>
+          <li><a href="contact.html" @click="closeMobile()" class="block px-4 py-3 rounded-lg text-gray-700 hover:bg-[#0F4C81]/5 hover:text-[#0F4C81] transition font-medium">Contact</a></li>
+        </ul>
+        <div class="mt-4 pt-4 border-t border-gray-100">
+          <a href="appointment.html" class="btn btn-primary w-full" @click="closeMobile()"><i class="fas fa-calendar-check"></i> Book Appointment</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header" aria-label="Page header">
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+      <nav class="breadcrumb mb-4" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="separator"><i class="fas fa-chevron-right text-xs"></i></span>
+        <span class="text-white/60">Contact</span>
+      </nav>
+      <h1 class="text-3xl md:text-5xl font-extrabold text-white">Contact Us</h1>
+      <p class="text-white/70 mt-2 max-w-xl">Get in touch with our team. We're here to help with all your tax and financial needs.</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section-padding" aria-label="Contact details">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-12">
+        <!-- Contact Info -->
+        <div class="space-y-6" data-aos="fade-right">
+          <div class="card-premium p-6 flex items-start gap-4">
+            <div class="w-14 h-14 rounded-2xl bg-[#0F4C81]/10 flex items-center justify-center text-[#0F4C81] flex-shrink-0"><i class="fas fa-map-marker-alt text-xl"></i></div>
+            <div><h3 class="font-bold mb-1">Office Address</h3><p class="text-gray-500 text-sm">Samabay Market (2nd Floor), Rangpur, Bangladesh</p></div>
+          </div>
+          <div class="card-premium p-6 flex items-start gap-4">
+            <div class="w-14 h-14 rounded-2xl bg-[#0E9F6E]/10 flex items-center justify-center text-[#0E9F6E] flex-shrink-0"><i class="fas fa-phone-alt text-xl"></i></div>
+            <div><h3 class="font-bold mb-1">Phone</h3><p class="text-gray-500 text-sm">01886-135595 / 01714-086432</p><a href="tel:+8801886135595" class="text-[#0F4C81] text-sm font-semibold hover:underline">Call Now</a></div>
+          </div>
+          <div class="card-premium p-6 flex items-start gap-4">
+            <div class="w-14 h-14 rounded-2xl bg-[#F59E0B]/10 flex items-center justify-center text-[#F59E0B] flex-shrink-0"><i class="fab fa-whatsapp text-xl"></i></div>
+            <div><h3 class="font-bold mb-1">WhatsApp</h3><p class="text-gray-500 text-sm">01886-135595</p><a href="https://wa.me/8801886135595" target="_blank" rel="noopener" class="text-[#0E9F6E] text-sm font-semibold hover:underline">Send Message</a></div>
+          </div>
+          <div class="card-premium p-6 flex items-start gap-4">
+            <div class="w-14 h-14 rounded-2xl bg-[#0F4C81]/10 flex items-center justify-center text-[#0F4C81] flex-shrink-0"><i class="fas fa-envelope text-xl"></i></div>
+            <div><h3 class="font-bold mb-1">Email</h3><p class="text-gray-500 text-sm">info@ajaysafiullah.com</p><a href="mailto:info@ajaysafiullah.com" class="text-[#0F4C81] text-sm font-semibold hover:underline">Send Email</a></div>
+          </div>
+          <div class="card-premium p-6 flex items-start gap-4">
+            <div class="w-14 h-14 rounded-2xl bg-[#0E9F6E]/10 flex items-center justify-center text-[#0E9F6E] flex-shrink-0"><i class="fas fa-clock text-xl"></i></div>
+            <div><h3 class="font-bold mb-1">Business Hours</h3><p class="text-gray-500 text-sm">Saturday - Thursday: 9:00 AM - 6:00 PM</p><p class="text-gray-400 text-sm">Friday: Closed</p></div>
+          </div>
+
+          <!-- Social Links -->
+          <div class="card-premium p-6">
+            <h3 class="font-bold mb-3">Follow Us</h3>
+            <div class="flex items-center gap-3">
+              <a href="#" class="w-11 h-11 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center hover:bg-blue-600 hover:text-white transition" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="w-11 h-11 rounded-xl bg-green-50 text-green-600 flex items-center justify-center hover:bg-green-600 hover:text-white transition" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+              <a href="#" class="w-11 h-11 rounded-xl bg-blue-50 text-blue-700 flex items-center justify-center hover:bg-blue-700 hover:text-white transition" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" class="w-11 h-11 rounded-xl bg-red-50 text-red-600 flex items-center justify-center hover:bg-red-600 hover:text-white transition" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form + Map -->
+        <div class="space-y-6" data-aos="fade-left">
+          <!-- Form -->
+          <div x-data="contactForm()" class="card-premium p-8">
+            <h3 class="text-xl font-bold mb-6">Send Us a Message</h3>
+
+            <div x-show="!submitted">
+              <form @submit.prevent="submit()" class="space-y-4">
+                <div>
+                  <label class="form-label" for="con-name">Your Name *</label>
+                  <input x-model="formData.name" type="text" id="con-name" class="form-input" :class="{'error':errors.name}" placeholder="Enter your full name" required>
+                  <p x-show="errors.name" x-text="errors.name" class="text-red-500 text-xs mt-1"></p>
+                </div>
+                <div class="grid sm:grid-cols-2 gap-4">
+                  <div>
+                    <label class="form-label" for="con-email">Email *</label>
+                    <input x-model="formData.email" type="email" id="con-email" class="form-input" :class="{'error':errors.email}" placeholder="your@email.com" required>
+                    <p x-show="errors.email" x-text="errors.email" class="text-red-500 text-xs mt-1"></p>
+                  </div>
+                  <div>
+                    <label class="form-label" for="con-phone">Phone *</label>
+                    <input x-model="formData.phone" type="tel" id="con-phone" class="form-input" :class="{'error':errors.phone}" placeholder="01XXXXXXXXX" required>
+                    <p x-show="errors.phone" x-text="errors.phone" class="text-red-500 text-xs mt-1"></p>
+                  </div>
+                </div>
+                <div>
+                  <label class="form-label" for="con-subject">Subject *</label>
+                  <input x-model="formData.subject" type="text" id="con-subject" class="form-input" :class="{'error':errors.subject}" placeholder="What is this about?" required>
+                  <p x-show="errors.subject" x-text="errors.subject" class="text-red-500 text-xs mt-1"></p>
+                </div>
+                <div>
+                  <label class="form-label" for="con-message">Message *</label>
+                  <textarea x-model="formData.message" id="con-message" rows="4" class="form-input" :class="{'error':errors.message}" placeholder="Write your message here..." required></textarea>
+                  <p x-show="errors.message" x-text="errors.message" class="text-red-500 text-xs mt-1"></p>
+                </div>
+                <button type="submit" class="btn btn-primary w-full" :disabled="loading">
+                  <template x-if="!loading"><span><i class="fas fa-paper-plane"></i> Send Message</span></template>
+                  <template x-if="loading"><span class="flex items-center gap-2"><span class="spinner"></span> Sending...</span></template>
+                </button>
+              </form>
+            </div>
+
+            <div x-show="submitted" x-cloak class="text-center py-8">
+              <div class="w-20 h-20 rounded-full bg-[#0E9F6E]/10 flex items-center justify-center mx-auto mb-4">
+                <i class="fas fa-check-circle text-4xl text-[#0E9F6E]"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-2">Message Sent Successfully!</h3>
+              <p class="text-gray-500">Thank you for contacting us. We will get back to you within 24 hours.</p>
+            </div>
+          </div>
+
+          <!-- Map Placeholder -->
+          <div class="card-premium overflow-hidden">
+            <div class="h-64 gradient-primary flex items-center justify-center text-white/30">
+              <div class="text-center">
+                <i class="fas fa-map-marked-alt text-5xl mb-3"></i>
+                <p class="text-white/60 text-sm">Samabay Market (2nd Floor), Rangpur, Bangladesh</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section-padding gradient-section relative overflow-hidden" aria-label="Call to action">
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+      <div class="absolute bottom-0 left-0 w-80 h-80 bg-white/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
+    </div>
+    <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+      <div data-aos="fade-up">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4">Prefer to <span class="text-[#F59E0B]">Book</span> a Consultation?</h2>
+        <p class="text-white/80 text-lg mb-8 max-w-2xl mx-auto">Schedule an appointment with our experts and get personalized assistance.</p>
+        <a href="appointment.html" class="btn btn-accent btn-lg"><i class="fas fa-calendar-check"></i> Book Appointment</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#0a3a63] text-white" role="contentinfo">
+    <div class="max-w-7xl mx-auto px-6 py-16">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-white"><i class="fas fa-calculator"></i></div>
+            <div><h3 class="font-extrabold text-lg leading-tight">Ajay & Safiullah</h3><p class="text-[10px] font-semibold text-[#F59E0B] tracking-wider uppercase leading-tight">VAT & Tax Consultancy</p></div>
+          </div>
+          <p class="text-white/70 text-sm leading-relaxed mb-4">NBR-approved VAT & Tax Consultancy Firm in Rangpur, Bangladesh.</p>
+          <div class="flex items-center gap-3">
+            <a href="#" class="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-[#F59E0B] transition text-sm" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-[#F59E0B] transition text-sm" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" class="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-[#F59E0B] transition text-sm" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-[#F59E0B] transition text-sm" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div>
+          <h3 class="font-bold text-lg mb-4">Quick Links</h3>
+          <ul class="space-y-3 list-none m-0 p-0">
+            <li><a href="index.html" class="text-white/70 hover:text-white transition text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-[#F59E0B]"></i> Home</a></li>
+            <li><a href="about.html" class="text-white/70 hover:text-white transition text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-[#F59E0B]"></i> About Us</a></li>
+            <li><a href="services.html" class="text-white/70 hover:text-white transition text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-[#F59E0B]"></i> Services</a></li>
+            <li><a href="blog.html" class="text-white/70 hover:text-white transition text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-[#F59E0B]"></i> Blog</a></li>
+            <li><a href="gallery.html" class="text-white/70 hover:text-white transition text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-[#F59E0B]"></i> Gallery</a></li>
+            <li><a href="faq.html" class="text-white/70 hover:text-white transition text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-[#F59E0B]"></i> FAQ</a></li>
+            <li><a href="contact.html" class="text-white/70 hover:text-white transition text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-[#F59E0B]"></i> Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-bold text-lg mb-4">Our Services</h3>
+          <ul class="space-y-3 list-none m-0 p-0">
+            <li><a href="services.html" class="text-white/70 hover:text-white transition text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-[#F59E0B]"></i> Income Tax</a></li>
+            <li><a href="services.html" class="text-white/70 hover:text-white transition text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-[#F59E0B]"></i> VAT Consultancy</a></li>
+            <li><a href="services.html" class="text-white/70 hover:text-white transition text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-[#F59E0B]"></i> Tax Return</a></li>
+            <li><a href="services.html" class="text-white/70 hover:text-white transition text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-[#F59E0B]"></i> Accounting</a></li>
+            <li><a href="services.html" class="text-white/70 hover:text-white transition text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-[#F59E0B]"></i> Business Registration</a></li>
+            <li><a href="services.html" class="text-white/70 hover:text-white transition text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-[#F59E0B]"></i> Financial Consultancy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-bold text-lg mb-4">Contact Info</h3>
+          <ul class="space-y-4 list-none m-0 p-0">
+            <li class="flex items-start gap-3"><i class="fas fa-map-marker-alt text-[#F59E0B] mt-1"></i><span class="text-white/70 text-sm">Samabay Market (2nd Floor), Rangpur</span></li>
+            <li class="flex items-start gap-3"><i class="fas fa-phone-alt text-[#F59E0B] mt-1"></i><div class="text-white/70 text-sm"><p class="m-0">01886-135595</p><p class="m-0">01714-086432</p></div></li>
+            <li class="flex items-start gap-3"><i class="fas fa-envelope text-[#F59E0B] mt-1"></i><span class="text-white/70 text-sm">info@ajaysafiullah.com</span></li>
+            <li class="flex items-start gap-3"><i class="fas fa-clock text-[#F59E0B] mt-1"></i><div class="text-white/70 text-sm"><p class="m-0">Sat - Thu: 9:00 AM - 6:00 PM</p><p class="m-0">Friday: Closed</p></div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-white/10">
+      <div class="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-white/60 text-sm m-0">&copy; 2026 Ajay & Safiullah Associates. All rights reserved.</p>
+        <div class="flex items-center gap-4">
+          <a href="privacy-policy.html" class="text-white/60 hover:text-white transition text-sm">Privacy Policy</a>
+          <a href="terms.html" class="text-white/60 hover:text-white transition text-sm">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js" defer></script>
+  <script src="assets/js/alpine.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

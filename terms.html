@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" x-data="navbar()">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms & Conditions | Ajay & Safiullah Associates</title>
+  <meta name="description" content="Terms and Conditions for using the services of Ajay & Safiullah Associates, VAT & Tax Consultancy Firm in Rangpur, Bangladesh.">
+  <link rel="canonical" href="https://www.ajaysafiullah.com/terms.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+  tailwind.config = {
+    theme: { extend: { colors: { primary: '#0F4C81', secondary: '#0E9F6E', accent: '#F59E0B' } } }
+  }
+  </script>
+  <link rel="stylesheet" href="assets/css/custom.css">
+  <style>[x-cloak]{display:none!important}</style>
+</head>
+<body>
+  <div x-data="toast()" x-show="show" x-cloak class="toast" :class="{'show':show}" role="alert" aria-live="polite">
+    <div class="toast-icon"><i class="fas fa-check-circle"></i></div>
+    <div><p class="font-semibold text-sm" x-text="message"></p></div>
+    <button @click="close()" class="ml-auto text-gray-400 hover:text-gray-600 transition" aria-label="Close"><i class="fas fa-times"></i></button>
+  </div>
+  <button class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+  <div class="hidden lg:block bg-[#0F4C81] text-white text-sm py-2">
+    <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+      <div class="flex items-center gap-6">
+        <a href="tel:+8801886135595" class="hover:text-[#F59E0B] transition flex items-center gap-2"><i class="fas fa-phone-alt text-[#F59E0B]"></i> +880 1886-135595</a>
+        <a href="tel:+8801714086432" class="hover:text-[#F59E0B] transition flex items-center gap-2"><i class="fas fa-phone-alt text-[#F59E0B]"></i> +880 1714-086432</a>
+        <a href="mailto:info@ajaysafiullah.com" class="hover:text-[#F59E0B] transition flex items-center gap-2"><i class="fas fa-envelope text-[#F59E0B]"></i> info@ajaysafiullah.com</a>
+      </div>
+      <div class="flex items-center gap-4">
+        <span class="flex items-center gap-2"><i class="fas fa-map-marker-alt text-[#F59E0B]"></i> Samabay Market, Rangpur</span>
+        <div class="flex items-center gap-3 ml-4">
+          <a href="#" class="hover:text-[#F59E0B] transition" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="hover:text-[#F59E0B] transition" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="#" class="hover:text-[#F59E0B] transition" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="hover:text-[#F59E0B] transition" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <header class="navbar" :class="{'navbar-scrolled':scrolled,'navbar-hidden':hidden}" role="banner">
+    <nav class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between" aria-label="Main navigation">
+      <a href="index.html" class="flex items-center gap-3 text-decoration-none"><div class="w-10 h-10 rounded-xl gradient-primary flex items-center justify-center text-white font-bold text-lg"><i class="fas fa-calculator"></i></div><div><h1 class="text-lg font-extrabold text-[#0F4C81] leading-tight m-0">Ajay & Safiullah</h1><p class="text-[10px] font-semibold text-[#0E9F6E] tracking-wider uppercase m-0 leading-tight">VAT & Tax Consultancy</p></div></a>
+      <ul class="hidden lg:flex items-center gap-8 list-none m-0 p-0">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="blog.html" class="nav-link">Blog</a></li>
+        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="faq.html" class="nav-link">FAQ</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="flex items-center gap-3">
+        <a href="appointment.html" class="btn btn-primary btn-sm hidden sm:inline-flex"><i class="fas fa-calendar-check"></i> Book Now</a>
+        <button @click="toggleMobile()" class="lg:hidden w-10 h-10 rounded-lg border border-gray-200 flex items-center justify-center text-gray-700 hover:bg-gray-100 transition" aria-label="Toggle mobile menu"><i class="fas fa-bars" x-show="!mobileOpen"></i><i class="fas fa-times" x-show="mobileOpen" x-cloak></i></button>
+      </div>
+    </nav>
+    <div x-show="mobileOpen" x-cloak x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 -translate-y-4" x-transition:enter-end="opacity-100 translate-y-0" class="lg:hidden border-t border-gray-100 bg-white shadow-lg">
+      <div class="max-w-7xl mx-auto px-6 py-4">
+        <ul class="list-none m-0 p-0 space-y-1">
+          <li><a href="index.html" @click="closeMobile()" class="block px-4 py-3 rounded-lg text-gray-700 hover:bg-[#0F4C81]/5 transition font-medium">Home</a></li>
+          <li><a href="about.html" @click="closeMobile()" class="block px-4 py-3 rounded-lg text-gray-700 hover:bg-[#0F4C81]/5 transition font-medium">About Us</a></li>
+          <li><a href="services.html" @click="closeMobile()" class="block px-4 py-3 rounded-lg text-gray-700 hover:bg-[#0F4C81]/5 transition font-medium">Services</a></li>
+          <li><a href="blog.html" @click="closeMobile()" class="block px-4 py-3 rounded-lg text-gray-700 hover:bg-[#0F4C81]/5 transition font-medium">Blog</a></li>
+          <li><a href="gallery.html" @click="closeMobile()" class="block px-4 py-3 rounded-lg text-gray-700 hover:bg-[#0F4C81]/5 transition font-medium">Gallery</a></li>
+          <li><a href="faq.html" @click="closeMobile()" class="block px-4 py-3 rounded-lg text-gray-700 hover:bg-[#0F4C81]/5 transition font-medium">FAQ</a></li>
+          <li><a href="contact.html" @click="closeMobile()" class="block px-4 py-3 rounded-lg text-gray-700 hover:bg-[#0F4C81]/5 transition font-medium">Contact</a></li>
+        </ul>
+        <div class="mt-4 pt-4 border-t border-gray-100"><a href="appointment.html" class="btn btn-primary w-full" @click="closeMobile()"><i class="fas fa-calendar-check"></i> Book Appointment</a></div>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-header" aria-label="Page header">
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+      <nav class="breadcrumb mb-4" aria-label="Breadcrumb">
+        <a href="index.html">Home</a><span class="separator"><i class="fas fa-chevron-right text-xs"></i></span><span class="text-white/60">Terms & Conditions</span>
+      </nav>
+      <h1 class="text-3xl md:text-5xl font-extrabold text-white">Terms & Conditions</h1>
+    </div>
+  </section>
+
+  <section class="section-padding" aria-label="Terms and conditions content">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="card-premium p-8 md:p-12 prose prose-gray max-w-none">
+        <p class="text-gray-500">Last updated: January 1, 2026</p>
+
+        <h2 class="text-2xl font-bold mt-8 mb-4">Acceptance of Terms</h2>
+        <p class="text-gray-500 leading-relaxed mb-4">By accessing and using the website of Ajay & Safiullah Associates, you agree to comply with and be bound by these Terms and Conditions. If you do not agree with any part of these terms, you should not use our website or services.</p>
+
+        <h2 class="text-2xl font-bold mt-8 mb-4">Services Description</h2>
+        <p class="text-gray-500 leading-relaxed mb-4">Ajay & Safiullah Associates provides VAT and Tax consultancy services, including but not limited to income tax filing, VAT management, tax return preparation, accounting, bookkeeping, business registration, and financial consultancy.</p>
+
+        <h2 class="text-2xl font-bold mt-8 mb-4">Client Responsibilities</h2>
+        <p class="text-gray-500 leading-relaxed mb-4">As a client, you agree to:</p>
+        <ul class="list-none space-y-2 mb-4">
+          <li class="flex items-start gap-3 text-gray-500"><i class="fas fa-check-circle text-[#0E9F6E] mt-1"></i> Provide accurate and complete information necessary for our services</li>
+          <li class="flex items-start gap-3 text-gray-500"><i class="fas fa-check-circle text-[#0E9F6E] mt-1"></i> Submit required documents in a timely manner</li>
+          <li class="flex items-start gap-3 text-gray-500"><i class="fas fa-check-circle text-[#0E9F6E] mt-1"></i> Make payments according to the agreed fee structure</li>
+          <li class="flex items-start gap-3 text-gray-500"><i class="fas fa-check-circle text-[#0E9F6E] mt-1"></i> Notify us of any changes in your financial circumstances</li>
+        </ul>
+
+        <h2 class="text-2xl font-bold mt-8 mb-4">Limitation of Liability</h2>
+        <p class="text-gray-500 leading-relaxed mb-4">Ajay & Safiullah Associates shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of our services. Our total liability shall not exceed the amount paid by you for the specific service giving rise to the claim.</p>
+
+        <h2 class="text-2xl font-bold mt-8 mb-4">Intellectual Property</h2>
+        <p class="text-gray-500 leading-relaxed mb-4">All content on this website, including text, graphics, logos, images, and software, is the property of Ajay & Safiullah Associates and is protected by applicable intellectual property laws.</p>
+
+        <h2 class="text-2xl font-bold mt-8 mb-4">Confidentiality</h2>
+        <p class="text-gray-500 leading-relaxed mb-4">We maintain strict confidentiality of all client information. However, we may disclose information if required by law or with your consent.</p>
+
+        <h2 class="text-2xl font-bold mt-8 mb-4">Changes to Terms</h2>
+        <p class="text-gray-500 leading-relaxed mb-4">We reserve the right to modify these terms at any time. Changes will be effective immediately upon posting to the website. Your continued use of our services after changes constitutes acceptance of the new terms.</p>
+
+        <h2 class="text-2xl font-bold mt-8 mb-4">Governing Law</h2>
+        <p class="text-gray-500 leading-relaxed mb-4">These terms shall be governed by and construed in accordance with the laws of Bangladesh. Any disputes shall be subject to the jurisdiction of the courts in Rangpur, Bangladesh.</p>
+
+        <h2 class="text-2xl font-bold mt-8 mb-4">Contact Information</h2>
+        <p class="text-gray-500 leading-relaxed mb-4">For questions about these Terms & Conditions, please contact us:</p>
+        <ul class="list-none space-y-2">
+          <li class="flex items-start gap-3 text-gray-500"><i class="fas fa-phone-alt text-[#0F4C81] mt-1"></i> 01886-135595 / 01714-086432</li>
+          <li class="flex items-start gap-3 text-gray-500"><i class="fas fa-envelope text-[#0F4C81] mt-1"></i> info@ajaysafiullah.com</li>
+          <li class="flex items-start gap-3 text-gray-500"><i class="fas fa-map-marker-alt text-[#0F4C81] mt-1"></i> Samabay Market (2nd Floor), Rangpur, Bangladesh</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-[#0a3a63] text-white" role="contentinfo">
+    <div class="max-w-7xl mx-auto px-6 py-16">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div><div class="flex items-center gap-3 mb-4"><div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-white"><i class="fas fa-calculator"></i></div><div><h3 class="font-extrabold text-lg leading-tight">Ajay & Safiullah</h3><p class="text-[10px] font-semibold text-[#F59E0B] tracking-wider uppercase leading-tight">VAT & Tax Consultancy</p></div></div><p class="text-white/70 text-sm leading-relaxed mb-4">NBR-approved VAT & Tax Consultancy Firm in Rangpur.</p></div>
+        <div><h3 class="font-bold text-lg mb-4">Quick Links</h3><ul class="space-y-3 list-none m-0 p-0"> <li><a href="index.html" class="text-white/70 hover:text-white transition text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-[#F59E0B]"></i> Home</a></li><li><a href="about.html" class="text-white/70 hover:text-white transition text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-[#F59E0B]"></i> About Us</a></li><li><a href="services.html" class="text-white/70 hover:text-white transition text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-[#F59E0B]"></i> Services</a></li><li><a href="blog.html" class="text-white/70 hover:text-white transition text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-[#F59E0B]"></i> Blog</a></li><li><a href="gallery.html" class="text-white/70 hover:text-white transition text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-[#F59E0B]"></i> Gallery</a></li><li><a href="faq.html" class="text-white/70 hover:text-white transition text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-[#F59E0B]"></i> FAQ</a></li><li><a href="contact.html" class="text-white/70 hover:text-white transition text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-[#F59E0B]"></i> Contact</a></li></ul></div>
+        <div><h3 class="font-bold text-lg mb-4">Our Services</h3><ul class="space-y-3 list-none m-0 p-0"> <li><a href="services.html" class="text-white/70 hover:text-white transition text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-[#F59E0B]"></i> Income Tax</a></li><li><a href="services.html" class="text-white/70 hover:text-white transition text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-[#F59E0B]"></i> VAT Consultancy</a></li><li><a href="services.html" class="text-white/70 hover:text-white transition text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-[#F59E0B]"></i> Tax Return</a></li><li><a href="services.html" class="text-white/70 hover:text-white transition text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-[#F59E0B]"></i> Accounting</a></li><li><a href="services.html" class="text-white/70 hover:text-white transition text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-[#F59E0B]"></i> Business Registration</a></li><li><a href="services.html" class="text-white/70 hover:text-white transition text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-[#F59E0B]"></i> Financial Consultancy</a></li></ul></div>
+        <div><h3 class="font-bold text-lg mb-4">Contact Info</h3><ul class="space-y-4 list-none m-0 p-0"> <li class="flex items-start gap-3"><i class="fas fa-map-marker-alt text-[#F59E0B] mt-1"></i><span class="text-white/70 text-sm">Samabay Market (2nd Floor), Rangpur</span></li><li class="flex items-start gap-3"><i class="fas fa-phone-alt text-[#F59E0B] mt-1"></i><div class="text-white/70 text-sm"><p class="m-0">01886-135595</p><p class="m-0">01714-086432</p></div></li><li class="flex items-start gap-3"><i class="fas fa-envelope text-[#F59E0B] mt-1"></i><span class="text-white/70 text-sm">info@ajaysafiullah.com</span></li><li class="flex items-start gap-3"><i class="fas fa-clock text-[#F59E0B] mt-1"></i><div class="text-white/70 text-sm"><p class="m-0">Sat - Thu: 9:00 AM - 6:00 PM</p><p class="m-0">Friday: Closed</p></div></li></ul></div>
+      </div>
+    </div>
+    <div class="border-t border-white/10"><div class="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-4"><p class="text-white/60 text-sm m-0">&copy; 2026 Ajay & Safiullah Associates. All rights reserved.</p><div class="flex items-center gap-4"><a href="privacy-policy.html" class="text-white/60 hover:text-white transition text-sm">Privacy Policy</a><a href="terms.html" class="text-white/60 hover:text-white transition text-sm">Terms & Conditions</a></div></div></div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js" defer></script>
+  <script src="assets/js/alpine.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

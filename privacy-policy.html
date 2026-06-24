@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" x-data="navbar()">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy | Ajay & Safiullah Associates</title>
+  <meta name="description" content="Privacy Policy of Ajay & Safiullah Associates, an NBR-approved VAT & Tax Consultancy Firm in Rangpur, Bangladesh.">
+  <link rel="canonical" href="https://www.ajaysafiullah.com/privacy-policy.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+  tailwind.config = {
+    theme: { extend: { colors: { primary: '#0F4C81', secondary: '#0E9F6E', accent: '#F59E0B' } } }
+  }
+  </script>
+  <link rel="stylesheet" href="assets/css/custom.css">
+  <style>[x-cloak]{display:none!important}</style>
+</head>
+<body>
+  <div x-data="toast()" x-show="show" x-cloak class="toast" :class="{'show':show}" role="alert" aria-live="polite">
+    <div class="toast-icon"><i class="fas fa-check-circle"></i></div>
+    <div><p class="font-semibold text-sm" x-text="message"></p></div>
+    <button @click="close()" class="ml-auto text-gray-400 hover:text-gray-600 transition" aria-label="Close"><i class="fas fa-times"></i></button>
+  </div>
+  <button class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+  <div class="hidden lg:block bg-[#0F4C81] text-white text-sm py-2">
+    <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+      <div class="flex items-center gap-6">
+        <a href="tel:+8801886135595" class="hover:text-[#F59E0B] transition flex items-center gap-2"><i class="fas fa-phone-alt text-[#F59E0B]"></i> +880 1886-135595</a>
+        <a href="tel:+8801714086432" class="hover:text-[#F59E0B] transition flex items-center gap-2"><i class="fas fa-phone-alt text-[#F59E0B]"></i> +880 1714-086432</a>
+        <a href="mailto:info@ajaysafiullah.com" class="hover:text-[#F59E0B] transition flex items-center gap-2"><i class="fas fa-envelope text-[#F59E0B]"></i> info@ajaysafiullah.com</a>
+      </div>
+      <div class="flex items-center gap-4">
+        <span class="flex items-center gap-2"><i class="fas fa-map-marker-alt text-[#F59E0B]"></i> Samabay Market, Rangpur</span>
+        <div class="flex items-center gap-3 ml-4">
+          <a href="#" class="hover:text-[#F59E0B] transition" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="hover:text-[#F59E0B] transition" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="#" class="hover:text-[#F59E0B] transition" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="hover:text-[#F59E0B] transition" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <header class="navbar" :class="{'navbar-scrolled':scrolled,'navbar-hidden':hidden}" role="banner">
+    <nav class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between" aria-label="Main navigation">
+      <a href="index.html" class="flex items-center gap-3 text-decoration-none"><div class="w-10 h-10 rounded-xl gradient-primary flex items-center justify-center text-white font-bold text-lg"><i class="fas fa-calculator"></i></div><div><h1 class="text-lg font-extrabold text-[#0F4C81] leading-tight m-0">Ajay & Safiullah</h1><p class="text-[10px] font-semibold text-[#0E9F6E] tracking-wider uppercase m-0 leading-tight">VAT & Tax Consultancy</p></div></a>
+      <ul class="hidden lg:flex items-center gap-8 list-none m-0 p-0">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="blog.html" class="nav-link">Blog</a></li>
+        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="faq.html" class="nav-link">FAQ</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="flex items-center gap-3">
+        <a href="appointment.html" class="btn btn-primary btn-sm hidden sm:inline-flex"><i class="fas fa-calendar-check"></i> Book Now</a>
+        <button @click="toggleMobile()" class="lg:hidden w-10 h-10 rounded-lg border border-gray-200 flex items-center justify-center text-gray-700 hover:bg-gray-100 transition" aria-label="Toggle mobile menu"><i class="fas fa-bars" x-show="!mobileOpen"></i><i class="fas fa-times" x-show="mobileOpen" x-cloak></i></button>
+      </div>
+    </nav>
+    <div x-show="mobileOpen" x-cloak x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 -translate-y-4" x-transition:enter-end="opacity-100 translate-y-0" class="lg:hidden border-t border-gray-100 bg-white shadow-lg">
+      <div class="max-w-7xl mx-auto px-6 py-4">
+        <ul class="list-none m-0 p-0 space-y-1">
+          <li><a href="index.html" @click="closeMobile()" class="block px-4 py-3 rounded-lg text-gray-700 hover:bg-[#0F4C81]/5 transition font-medium">Home</a></li>
+          <li><a href="about.html" @click="closeMobile()" class="block px-4 py-3 rounded-lg text-gray-700 hover:bg-[#0F4C81]/5 transition font-medium">About Us</a></li>
+          <li><a href="services.html" @click="closeMobile()" class="block px-4 py-3 rounded-lg text-gray-700 hover:bg-[#0F4C81]/5 transition font-medium">Services</a></li>
+          <li><a href="blog.html" @click="closeMobile()" class="block px-4 py-3 rounded-lg text-gray-700 hover:bg-[#0F4C81]/5 transition font-medium">Blog</a></li>
+          <li><a href="gallery.html" @click="closeMobile()" class="block px-4 py-3 rounded-lg text-gray-700 hover:bg-[#0F4C81]/5 transition font-medium">Gallery</a></li>
+          <li><a href="faq.html" @click="closeMobile()" class="block px-4 py-3 rounded-lg text-gray-700 hover:bg-[#0F4C81]/5 transition font-medium">FAQ</a></li>
+          <li><a href="contact.html" @click="closeMobile()" class="block px-4 py-3 rounded-lg text-gray-700 hover:bg-[#0F4C81]/5 transition font-medium">Contact</a></li>
+        </ul>
+        <div class="mt-4 pt-4 border-t border-gray-100"><a href="appointment.html" class="btn btn-primary w-full" @click="closeMobile()"><i class="fas fa-calendar-check"></i> Book Appointment</a></div>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-header" aria-label="Page header">
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+      <nav class="breadcrumb mb-4" aria-label="Breadcrumb">
+        <a href="index.html">Home</a><span class="separator"><i class="fas fa-chevron-right text-xs"></i></span><span class="text-white/60">Privacy Policy</span>
+      </nav>
+      <h1 class="text-3xl md:text-5xl font-extrabold text-white">Privacy Policy</h1>
+    </div>
+  </section>
+
+  <section class="section-padding" aria-label="Privacy policy content">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="card-premium p-8 md:p-12 prose prose-gray max-w-none">
+        <p class="text-gray-500">Last updated: January 1, 2026</p>
+
+        <h2 class="text-2xl font-bold mt-8 mb-4">Introduction</h2>
+        <p class="text-gray-500 leading-relaxed mb-4">Ajay & Safiullah Associates ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.</p>
+        <p class="text-gray-500 leading-relaxed mb-4">Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the site or use our services.</p>
+
+        <h2 class="text-2xl font-bold mt-8 mb-4">Information We Collect</h2>
+        <p class="text-gray-500 leading-relaxed mb-4">We may collect the following types of information:</p>
+        <ul class="list-none space-y-2 mb-4">
+          <li class="flex items-start gap-3 text-gray-500"><i class="fas fa-check-circle text-[#0E9F6E] mt-1"></i> <strong>Personal Identification Information:</strong> Name, phone number, email address, postal address, and other similar information.</li>
+          <li class="flex items-start gap-3 text-gray-500"><i class="fas fa-check-circle text-[#0E9F6E] mt-1"></i> <strong>Financial Information:</strong> Tax-related documents, financial statements, and business information necessary to provide our services.</li>
+          <li class="flex items-start gap-3 text-gray-500"><i class="fas fa-check-circle text-[#0E9F6E] mt-1"></i> <strong>Usage Data:</strong> Information about how you interact with our website, including pages visited, time spent, and referring URLs.</li>
+        </ul>
+
+        <h2 class="text-2xl font-bold mt-8 mb-4">How We Use Your Information</h2>
+        <p class="text-gray-500 leading-relaxed mb-4">We use the collected information for the following purposes:</p>
+        <ul class="list-none space-y-2 mb-4">
+          <li class="flex items-start gap-3 text-gray-500"><i class="fas fa-check-circle text-[#0E9F6E] mt-1"></i> To provide and maintain our tax and financial consultancy services</li>
+          <li class="flex items-start gap-3 text-gray-500"><i class="fas fa-check-circle text-[#0E9F6E] mt-1"></i> To communicate with you regarding appointments, inquiries, and service updates</li>
+          <li class="flex items-start gap-3 text-gray-500"><i class="fas fa-check-circle text-[#0E9F6E] mt-1"></i> To comply with legal obligations and regulatory requirements</li>
+          <li class="flex items-start gap-3 text-gray-500"><i class="fas fa-check-circle text-[#0E9F6E] mt-1"></i> To improve our website and services</li>
+          <li class="flex items-start gap-3 text-gray-500"><i class="fas fa-check-circle text-[#0E9F6E] mt-1"></i> To send relevant updates and information about our services</li>
+        </ul>
+
+        <h2 class="text-2xl font-bold mt-8 mb-4">Information Sharing</h2>
+        <p class="text-gray-500 leading-relaxed mb-4">We do not sell, trade, or rent your personal information to third parties. We may share information only when required by law, to protect our rights, or with your explicit consent.</p>
+
+        <h2 class="text-2xl font-bold mt-8 mb-4">Data Security</h2>
+        <p class="text-gray-500 leading-relaxed mb-4">We implement appropriate technical and organizational measures to safeguard your personal information against unauthorized access, alteration, disclosure, or destruction.</p>
+
+        <h2 class="text-2xl font-bold mt-8 mb-4">Your Rights</h2>
+        <p class="text-gray-500 leading-relaxed mb-4">You have the right to:</p>
+        <ul class="list-none space-y-2 mb-4">
+          <li class="flex items-start gap-3 text-gray-500"><i class="fas fa-check-circle text-[#0E9F6E] mt-1"></i> Access the personal information we hold about you</li>
+          <li class="flex items-start gap-3 text-gray-500"><i class="fas fa-check-circle text-[#0E9F6E] mt-1"></i> Request correction of inaccurate information</li>
+          <li class="flex items-start gap-3 text-gray-500"><i class="fas fa-check-circle text-[#0E9F6E] mt-1"></i> Request deletion of your information (subject to legal obligations)</li>
+          <li class="flex items-start gap-3 text-gray-500"><i class="fas fa-check-circle text-[#0E9F6E] mt-1"></i> Withdraw consent at any time</li>
+        </ul>
+
+        <h2 class="text-2xl font-bold mt-8 mb-4">Cookies</h2>
+        <p class="text-gray-500 leading-relaxed mb-4">Our website may use cookies for analytics and functionality purposes. You can choose to disable cookies in your browser settings, but this may affect certain features of the website.</p>
+
+        <h2 class="text-2xl font-bold mt-8 mb-4">Contact Us</h2>
+        <p class="text-gray-500 leading-relaxed mb-4">If you have any questions about this Privacy Policy, please contact us:</p>
+        <ul class="list-none space-y-2">
+          <li class="flex items-start gap-3 text-gray-500"><i class="fas fa-phone-alt text-[#0F4C81] mt-1"></i> 01886-135595 / 01714-086432</li>
+          <li class="flex items-start gap-3 text-gray-500"><i class="fas fa-envelope text-[#0F4C81] mt-1"></i> info@ajaysafiullah.com</li>
+          <li class="flex items-start gap-3 text-gray-500"><i class="fas fa-map-marker-alt text-[#0F4C81] mt-1"></i> Samabay Market (2nd Floor), Rangpur, Bangladesh</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-[#0a3a63] text-white" role="contentinfo">
+    <div class="max-w-7xl mx-auto px-6 py-16">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div><div class="flex items-center gap-3 mb-4"><div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-white"><i class="fas fa-calculator"></i></div><div><h3 class="font-extrabold text-lg leading-tight">Ajay & Safiullah</h3><p class="text-[10px] font-semibold text-[#F59E0B] tracking-wider uppercase leading-tight">VAT & Tax Consultancy</p></div></div><p class="text-white/70 text-sm leading-relaxed mb-4">NBR-approved VAT & Tax Consultancy Firm in Rangpur.</p></div>
+        <div><h3 class="font-bold text-lg mb-4">Quick Links</h3><ul class="space-y-3 list-none m-0 p-0"> <li><a href="index.html" class="text-white/70 hover:text-white transition text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-[#F59E0B]"></i> Home</a></li><li><a href="about.html" class="text-white/70 hover:text-white transition text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-[#F59E0B]"></i> About Us</a></li><li><a href="services.html" class="text-white/70 hover:text-white transition text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-[#F59E0B]"></i> Services</a></li><li><a href="blog.html" class="text-white/70 hover:text-white transition text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-[#F59E0B]"></i> Blog</a></li><li><a href="gallery.html" class="text-white/70 hover:text-white transition text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-[#F59E0B]"></i> Gallery</a></li><li><a href="faq.html" class="text-white/70 hover:text-white transition text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-[#F59E0B]"></i> FAQ</a></li><li><a href="contact.html" class="text-white/70 hover:text-white transition text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-[#F59E0B]"></i> Contact</a></li></ul></div>
+        <div><h3 class="font-bold text-lg mb-4">Our Services</h3><ul class="space-y-3 list-none m-0 p-0"> <li><a href="services.html" class="text-white/70 hover:text-white transition text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-[#F59E0B]"></i> Income Tax</a></li><li><a href="services.html" class="text-white/70 hover:text-white transition text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-[#F59E0B]"></i> VAT Consultancy</a></li><li><a href="services.html" class="text-white/70 hover:text-white transition text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-[#F59E0B]"></i> Tax Return</a></li><li><a href="services.html" class="text-white/70 hover:text-white transition text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-[#F59E0B]"></i> Accounting</a></li><li><a href="services.html" class="text-white/70 hover:text-white transition text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-[#F59E0B]"></i> Business Registration</a></li><li><a href="services.html" class="text-white/70 hover:text-white transition text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-[#F59E0B]"></i> Financial Consultancy</a></li></ul></div>
+        <div><h3 class="font-bold text-lg mb-4">Contact Info</h3><ul class="space-y-4 list-none m-0 p-0"> <li class="flex items-start gap-3"><i class="fas fa-map-marker-alt text-[#F59E0B] mt-1"></i><span class="text-white/70 text-sm">Samabay Market (2nd Floor), Rangpur</span></li><li class="flex items-start gap-3"><i class="fas fa-phone-alt text-[#F59E0B] mt-1"></i><div class="text-white/70 text-sm"><p class="m-0">01886-135595</p><p class="m-0">01714-086432</p></div></li><li class="flex items-start gap-3"><i class="fas fa-envelope text-[#F59E0B] mt-1"></i><span class="text-white/70 text-sm">info@ajaysafiullah.com</span></li><li class="flex items-start gap-3"><i class="fas fa-clock text-[#F59E0B] mt-1"></i><div class="text-white/70 text-sm"><p class="m-0">Sat - Thu: 9:00 AM - 6:00 PM</p><p class="m-0">Friday: Closed</p></div></li></ul></div>
+      </div>
+    </div>
+    <div class="border-t border-white/10"><div class="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-4"><p class="text-white/60 text-sm m-0">&copy; 2026 Ajay & Safiullah Associates. All rights reserved.</p><div class="flex items-center gap-4"><a href="privacy-policy.html" class="text-white/60 hover:text-white transition text-sm">Privacy Policy</a><a href="terms.html" class="text-white/60 hover:text-white transition text-sm">Terms & Conditions</a></div></div></div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js" defer></script>
+  <script src="assets/js/alpine.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
